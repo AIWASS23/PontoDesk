@@ -8,6 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1427E4F62C5A5D9A00E8D2DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1427E4F52C5A5D9A00E8D2DA /* GoogleService-Info.plist */; };
+		1427E4F82C5A6CF300E8D2DA /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1427E4F72C5A6CF300E8D2DA /* Sidebar.swift */; };
+		1427E4FA2C5A6D3500E8D2DA /* ItemGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1427E4F92C5A6D3500E8D2DA /* ItemGroup.swift */; };
+		1427E4FC2C5A6D5D00E8D2DA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1427E4FB2C5A6D5D00E8D2DA /* Item.swift */; };
+		1427E4FE2C5A6E4C00E8D2DA /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1427E4FD2C5A6E4C00E8D2DA /* SidebarView.swift */; };
+		1427E5002C5A6EA400E8D2DA /* SidebarHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1427E4FF2C5A6EA400E8D2DA /* SidebarHeader.swift */; };
+		1427E5022C5A6F8F00E8D2DA /* SidebarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1427E5012C5A6F8F00E8D2DA /* SidebarButton.swift */; };
+		1427E5042C5A704700E8D2DA /* ItemGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1427E5032C5A704700E8D2DA /* ItemGroupView.swift */; };
+		1427E5062C5A70BB00E8D2DA /* ItemGroupHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1427E5052C5A70BB00E8D2DA /* ItemGroupHeader.swift */; };
+		1427E5082C5A717200E8D2DA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1427E5072C5A717200E8D2DA /* Extensions.swift */; };
+		1427E50A2C5A731400E8D2DA /* Translucency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1427E5092C5A731400E8D2DA /* Translucency.swift */; };
+		1427E50C2C5A735E00E8D2DA /* TranslucentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1427E50B2C5A735E00E8D2DA /* TranslucentView.swift */; };
+		1427E50E2C5A740400E8D2DA /* MacSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1427E50D2C5A740400E8D2DA /* MacSize.swift */; };
+		1427E5102C5A749900E8D2DA /* SidebarSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1427E50F2C5A749900E8D2DA /* SidebarSelection.swift */; };
+		1427E5122C5A751200E8D2DA /* SidebarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1427E5112C5A751200E8D2DA /* SidebarItem.swift */; };
+		1427E5142C5A754E00E8D2DA /* SidebarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1427E5132C5A754E00E8D2DA /* SidebarIcon.swift */; };
 		147ED41E2C57B7EE008D4C04 /* PontoDeskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147ED41D2C57B7EE008D4C04 /* PontoDeskApp.swift */; };
 		147ED4202C57B7EE008D4C04 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147ED41F2C57B7EE008D4C04 /* ContentView.swift */; };
 		147ED4222C57B7F0008D4C04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 147ED4212C57B7F0008D4C04 /* Assets.xcassets */; };
@@ -55,6 +70,21 @@
 
 /* Begin PBXFileReference section */
 		1427E4F52C5A5D9A00E8D2DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1427E4F72C5A6CF300E8D2DA /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		1427E4F92C5A6D3500E8D2DA /* ItemGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemGroup.swift; sourceTree = "<group>"; };
+		1427E4FB2C5A6D5D00E8D2DA /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		1427E4FD2C5A6E4C00E8D2DA /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		1427E4FF2C5A6EA400E8D2DA /* SidebarHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarHeader.swift; sourceTree = "<group>"; };
+		1427E5012C5A6F8F00E8D2DA /* SidebarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarButton.swift; sourceTree = "<group>"; };
+		1427E5032C5A704700E8D2DA /* ItemGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemGroupView.swift; sourceTree = "<group>"; };
+		1427E5052C5A70BB00E8D2DA /* ItemGroupHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemGroupHeader.swift; sourceTree = "<group>"; };
+		1427E5072C5A717200E8D2DA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1427E5092C5A731400E8D2DA /* Translucency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translucency.swift; sourceTree = "<group>"; };
+		1427E50B2C5A735E00E8D2DA /* TranslucentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslucentView.swift; sourceTree = "<group>"; };
+		1427E50D2C5A740400E8D2DA /* MacSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacSize.swift; sourceTree = "<group>"; };
+		1427E50F2C5A749900E8D2DA /* SidebarSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarSelection.swift; sourceTree = "<group>"; };
+		1427E5112C5A751200E8D2DA /* SidebarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarItem.swift; sourceTree = "<group>"; };
+		1427E5132C5A754E00E8D2DA /* SidebarIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarIcon.swift; sourceTree = "<group>"; };
 		147ED41A2C57B7EE008D4C04 /* PontoDesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PontoDesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		147ED41D2C57B7EE008D4C04 /* PontoDeskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoDeskApp.swift; sourceTree = "<group>"; };
 		147ED41F2C57B7EE008D4C04 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +169,21 @@
 				14EB74A22C5919150006B201 /* Info.plist */,
 				147ED41D2C57B7EE008D4C04 /* PontoDeskApp.swift */,
 				147ED41F2C57B7EE008D4C04 /* ContentView.swift */,
+				1427E4F72C5A6CF300E8D2DA /* Sidebar.swift */,
+				1427E4FD2C5A6E4C00E8D2DA /* SidebarView.swift */,
+				1427E4F92C5A6D3500E8D2DA /* ItemGroup.swift */,
+				1427E5032C5A704700E8D2DA /* ItemGroupView.swift */,
+				1427E4FF2C5A6EA400E8D2DA /* SidebarHeader.swift */,
+				1427E50F2C5A749900E8D2DA /* SidebarSelection.swift */,
+				1427E5092C5A731400E8D2DA /* Translucency.swift */,
+				1427E50D2C5A740400E8D2DA /* MacSize.swift */,
+				1427E50B2C5A735E00E8D2DA /* TranslucentView.swift */,
+				1427E5052C5A70BB00E8D2DA /* ItemGroupHeader.swift */,
+				1427E5072C5A717200E8D2DA /* Extensions.swift */,
+				1427E5012C5A6F8F00E8D2DA /* SidebarButton.swift */,
+				1427E4FB2C5A6D5D00E8D2DA /* Item.swift */,
+				1427E5132C5A754E00E8D2DA /* SidebarIcon.swift */,
+				1427E5112C5A751200E8D2DA /* SidebarItem.swift */,
 				147ED4212C57B7F0008D4C04 /* Assets.xcassets */,
 				147ED4262C57B7F0008D4C04 /* PontoDesk.entitlements */,
 				1427E4F52C5A5D9A00E8D2DA /* GoogleService-Info.plist */,
@@ -327,8 +372,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1427E50A2C5A731400E8D2DA /* Translucency.swift in Sources */,
+				1427E5002C5A6EA400E8D2DA /* SidebarHeader.swift in Sources */,
+				1427E4FC2C5A6D5D00E8D2DA /* Item.swift in Sources */,
+				1427E5042C5A704700E8D2DA /* ItemGroupView.swift in Sources */,
 				147ED4202C57B7EE008D4C04 /* ContentView.swift in Sources */,
+				1427E5122C5A751200E8D2DA /* SidebarItem.swift in Sources */,
+				1427E4F82C5A6CF300E8D2DA /* Sidebar.swift in Sources */,
+				1427E50C2C5A735E00E8D2DA /* TranslucentView.swift in Sources */,
+				1427E5022C5A6F8F00E8D2DA /* SidebarButton.swift in Sources */,
+				1427E4FA2C5A6D3500E8D2DA /* ItemGroup.swift in Sources */,
+				1427E5062C5A70BB00E8D2DA /* ItemGroupHeader.swift in Sources */,
+				1427E5142C5A754E00E8D2DA /* SidebarIcon.swift in Sources */,
 				147ED41E2C57B7EE008D4C04 /* PontoDeskApp.swift in Sources */,
+				1427E5102C5A749900E8D2DA /* SidebarSelection.swift in Sources */,
+				1427E5082C5A717200E8D2DA /* Extensions.swift in Sources */,
+				1427E50E2C5A740400E8D2DA /* MacSize.swift in Sources */,
+				1427E4FE2C5A6E4C00E8D2DA /* SidebarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
