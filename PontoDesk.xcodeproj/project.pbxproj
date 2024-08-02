@@ -30,10 +30,10 @@
 		14EB74872C5912A60006B201 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74862C5912A60006B201 /* FirebaseFunctions */; };
 		14EB748F2C5912A60006B201 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB748E2C5912A60006B201 /* FirebaseInstallations */; };
 		14EB74932C5912A60006B201 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74922C5912A60006B201 /* FirebaseMessaging */; };
-		14EB74952C5912A60006B201 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74942C5912A60006B201 /* FirebasePerformance */; };
 		14EB74972C5912A60006B201 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74962C5912A60006B201 /* FirebaseRemoteConfig */; };
 		14EB74992C5912A60006B201 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74982C5912A60006B201 /* FirebaseRemoteConfigSwift */; };
 		14EB749B2C5912A60006B201 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB749A2C5912A60006B201 /* FirebaseStorage */; };
+		B83380912C5D2B72006AA587 /* TemplateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83380902C5D2B72006AA587 /* TemplateComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,16 @@
 		147ED4352C57B7F0008D4C04 /* PontoDeskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PontoDeskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		147ED4392C57B7F0008D4C04 /* PontoDeskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoDeskUITests.swift; sourceTree = "<group>"; };
 		147ED43B2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoDeskUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		14EB74A22C5919150006B201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		14EB74A22C5919150006B201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B83380902C5D2B72006AA587 /* TemplateComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateComponent.swift; sourceTree = "<group>"; };
+		B83380982C5D2DB7006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
+		B833809A2C5D2E03006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
+		B833809C2C5D2E14006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
+		B833809E2C5D2E25006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
+		B83380A02C5D2E3B006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
+		B83380A32C5D2E51006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
+		B83380A52C5D2E60006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
+		B83380A72C5D2E74006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +97,6 @@
 				14EB747D2C5912A60006B201 /* FirebaseDatabaseSwift in Frameworks */,
 				14EB74872C5912A60006B201 /* FirebaseFunctions in Frameworks */,
 				14EB74972C5912A60006B201 /* FirebaseRemoteConfig in Frameworks */,
-				14EB74952C5912A60006B201 /* FirebasePerformance in Frameworks */,
 				14EB749B2C5912A60006B201 /* FirebaseStorage in Frameworks */,
 				14EB747F2C5912A60006B201 /* FirebaseDynamicLinks in Frameworks */,
 				14EB74932C5912A60006B201 /* FirebaseMessaging in Frameworks */,
@@ -136,23 +144,15 @@
 		147ED41C2C57B7EE008D4C04 /* PontoDesk */ = {
 			isa = PBXGroup;
 			children = (
-				14EB74A22C5919150006B201 /* Info.plist */,
-				147ED41D2C57B7EE008D4C04 /* PontoDeskApp.swift */,
-				147ED41F2C57B7EE008D4C04 /* ContentView.swift */,
-				147ED4212C57B7F0008D4C04 /* Assets.xcassets */,
+				B83380872C5D28F0006AA587 /* App */,
+				B833808C2C5D291D006AA587 /* Models */,
+				B83380892C5D2901006AA587 /* Utils */,
+				B83380882C5D28F6006AA587 /* Features */,
+				B833808A2C5D2908006AA587 /* Services */,
+				B833808B2C5D2911006AA587 /* Resources */,
 				147ED4262C57B7F0008D4C04 /* PontoDesk.entitlements */,
-				1427E4F52C5A5D9A00E8D2DA /* GoogleService-Info.plist */,
-				147ED4232C57B7F0008D4C04 /* Preview Content */,
 			);
 			path = PontoDesk;
-			sourceTree = "<group>";
-		};
-		147ED4232C57B7F0008D4C04 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				147ED4242C57B7F0008D4C04 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		147ED42E2C57B7F0008D4C04 /* PontoDeskTests */ = {
@@ -170,6 +170,127 @@
 				147ED43B2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift */,
 			);
 			path = PontoDeskUITests;
+			sourceTree = "<group>";
+		};
+		B83380872C5D28F0006AA587 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				147ED41D2C57B7EE008D4C04 /* PontoDeskApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B83380882C5D28F6006AA587 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				B833808E2C5D2AC6006AA587 /* TemplateFeature */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		B83380892C5D2901006AA587 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B83380972C5D2D42006AA587 /* Enums */,
+				B83380962C5D2D0F006AA587 /* Components */,
+				B83380952C5D2D02006AA587 /* Extensions */,
+				B83380942C5D2CFA006AA587 /* Protocols */,
+				B83380932C5D2CF3006AA587 /* Styles */,
+				B83380922C5D2CEB006AA587 /* Structs */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B833808A2C5D2908006AA587 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B83380982C5D2DB7006AA587 /* .placeholder */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B833808B2C5D2911006AA587 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				147ED4212C57B7F0008D4C04 /* Assets.xcassets */,
+				147ED4242C57B7F0008D4C04 /* Preview Assets.xcassets */,
+				1427E4F52C5A5D9A00E8D2DA /* GoogleService-Info.plist */,
+				14EB74A22C5919150006B201 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B833808C2C5D291D006AA587 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B83380A72C5D2E74006AA587 /* .placeholder */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B833808E2C5D2AC6006AA587 /* TemplateFeature */ = {
+			isa = PBXGroup;
+			children = (
+				147ED41F2C57B7EE008D4C04 /* ContentView.swift */,
+				B833808F2C5D2ADC006AA587 /* Components */,
+			);
+			path = TemplateFeature;
+			sourceTree = "<group>";
+		};
+		B833808F2C5D2ADC006AA587 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B83380902C5D2B72006AA587 /* TemplateComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B83380922C5D2CEB006AA587 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				B83380A32C5D2E51006AA587 /* .placeholder */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		B83380932C5D2CF3006AA587 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				B83380A52C5D2E60006AA587 /* .placeholder */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		B83380942C5D2CFA006AA587 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B83380A02C5D2E3B006AA587 /* .placeholder */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B83380952C5D2D02006AA587 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B833809E2C5D2E25006AA587 /* .placeholder */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B83380962C5D2D0F006AA587 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B833809C2C5D2E14006AA587 /* .placeholder */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B83380972C5D2D42006AA587 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B833809A2C5D2E03006AA587 /* .placeholder */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +325,6 @@
 				14EB74862C5912A60006B201 /* FirebaseFunctions */,
 				14EB748E2C5912A60006B201 /* FirebaseInstallations */,
 				14EB74922C5912A60006B201 /* FirebaseMessaging */,
-				14EB74942C5912A60006B201 /* FirebasePerformance */,
 				14EB74962C5912A60006B201 /* FirebaseRemoteConfig */,
 				14EB74982C5912A60006B201 /* FirebaseRemoteConfigSwift */,
 				14EB749A2C5912A60006B201 /* FirebaseStorage */,
@@ -328,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				147ED4202C57B7EE008D4C04 /* ContentView.swift in Sources */,
+				B83380912C5D2B72006AA587 /* TemplateComponent.swift in Sources */,
 				147ED41E2C57B7EE008D4C04 /* PontoDeskApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,11 +610,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PontoDesk/PontoDesk.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PontoDesk/Preview Content\"";
-				DEVELOPMENT_TEAM = 7P3G4Y9CSP;
+				DEVELOPMENT_ASSET_PATHS = "\"PontoDesk/Resources\"";
+				DEVELOPMENT_TEAM = PSL5Y7F3J8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -505,7 +627,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MarceloDeAraujo.PontoDesk;
+				PRODUCT_BUNDLE_IDENTIFIER = MarcosDaniel.PontoDesk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -518,11 +640,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PontoDesk/PontoDesk.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PontoDesk/Preview Content\"";
-				DEVELOPMENT_TEAM = 7P3G4Y9CSP;
+				DEVELOPMENT_ASSET_PATHS = "\"PontoDesk/Resources\"";
+				DEVELOPMENT_TEAM = PSL5Y7F3J8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -534,7 +657,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MarceloDeAraujo.PontoDesk;
+				PRODUCT_BUNDLE_IDENTIFIER = MarcosDaniel.PontoDesk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -740,11 +863,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 14EB74652C5910480006B201 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
-		};
-		14EB74942C5912A60006B201 /* FirebasePerformance */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 14EB74652C5910480006B201 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebasePerformance;
 		};
 		14EB74962C5912A60006B201 /* FirebaseRemoteConfig */ = {
 			isa = XCSwiftPackageProductDependency;
