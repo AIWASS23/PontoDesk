@@ -16,15 +16,23 @@ struct SideBarLayout: View {
         VStack(alignment: .leading, spacing: 0) {
             Spacer()
             
-            SidebarUniqueItem(showLegend: $showLegend, itemIcon: "clock-icon", itemName: "PontoDesk")
+            SideBarButton(buttonAction: {
+                print("Eu funciono")
+            }, showLegend: $showLegend, tabName: "PontoDesk", tabIcon: "clock-icon", currentTab: $currentTab)
             
             Spacer()
             
-            SideBarButton(currentTab: $currentTab, showLegend: $showLegend)
+            ForEach(TabOptions.allCases, id: \.rawValue) { tab in
+                SideBarButton(buttonAction: {
+                    currentTab = tab
+                }, showLegend: $showLegend, tabName: tab.rawValue, tabIcon: tab.symbol, currentTab: $currentTab)
+            }
             
             Spacer()
             
-            SidebarUniqueItem(showLegend: $showLegend, itemIcon: "logout-icon", itemName: "Logout")
+            SideBarButton(buttonAction: {
+                print("Eu funciono pra sair da aplicação")
+            }, showLegend: $showLegend, tabName: "Logout", tabIcon: "logout-icon", currentTab: $currentTab)
             
             Spacer()
         }
