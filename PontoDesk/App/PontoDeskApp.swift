@@ -20,7 +20,10 @@ struct PontoDeskApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SideBar()
+            GeometryReader{reader in
+                LoginView(screenSize: reader)
+                    .background(.bgScreen)
+            }
         }
     }
 }
