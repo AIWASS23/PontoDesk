@@ -18,6 +18,17 @@
 		14EB74752C5912A60006B201 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74742C5912A60006B201 /* FirebaseAuth */; };
 		14EB74812C5912A60006B201 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74802C5912A60006B201 /* FirebaseFirestore */; };
 		14EB749B2C5912A60006B201 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB749A2C5912A60006B201 /* FirebaseStorage */; };
+		3F3EFFB32C6245F4008E2945 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFB22C6245F4008E2945 /* SideBar.swift */; };
+		3F3EFFB92C6253C0008E2945 /* SideBarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFB82C6253C0008E2945 /* SideBarLayout.swift */; };
+		3F3EFFBB2C6253D9008E2945 /* SideBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFBA2C6253D9008E2945 /* SideBarManager.swift */; };
+		3F3EFFBD2C625701008E2945 /* TabOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFBC2C625701008E2945 /* TabOptions.swift */; };
+		3F3EFFC22C62575C008E2945 /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFC12C62575C008E2945 /* PointView.swift */; };
+		3F3EFFC52C625771008E2945 /* BookTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFC42C625771008E2945 /* BookTableView.swift */; };
+		3F3EFFC82C62578D008E2945 /* BookRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFC72C62578D008E2945 /* BookRoomView.swift */; };
+		3F3EFFCB2C6257DB008E2945 /* ComponentBookRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFCA2C6257DB008E2945 /* ComponentBookRoom.swift */; };
+		3F3EFFCD2C6257EB008E2945 /* ComponentBookTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFCC2C6257EB008E2945 /* ComponentBookTable.swift */; };
+		3F3EFFCF2C6257F9008E2945 /* ComponentPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFCE2C6257F9008E2945 /* ComponentPoint.swift */; };
+		3F3EFFD12C625F70008E2945 /* SideBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFD02C625F70008E2945 /* SideBarButton.swift */; };
 		B83380912C5D2B72006AA587 /* TemplateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83380902C5D2B72006AA587 /* TemplateComponent.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,9 +63,19 @@
 		147ED4392C57B7F0008D4C04 /* PontoDeskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoDeskUITests.swift; sourceTree = "<group>"; };
 		147ED43B2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoDeskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		14EB74A22C5919150006B201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F3EFFB22C6245F4008E2945 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		3F3EFFB82C6253C0008E2945 /* SideBarLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarLayout.swift; sourceTree = "<group>"; };
+		3F3EFFBA2C6253D9008E2945 /* SideBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarManager.swift; sourceTree = "<group>"; };
+		3F3EFFBC2C625701008E2945 /* TabOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOptions.swift; sourceTree = "<group>"; };
+		3F3EFFC12C62575C008E2945 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
+		3F3EFFC42C625771008E2945 /* BookTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableView.swift; sourceTree = "<group>"; };
+		3F3EFFC72C62578D008E2945 /* BookRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRoomView.swift; sourceTree = "<group>"; };
+		3F3EFFCA2C6257DB008E2945 /* ComponentBookRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBookRoom.swift; sourceTree = "<group>"; };
+		3F3EFFCC2C6257EB008E2945 /* ComponentBookTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBookTable.swift; sourceTree = "<group>"; };
+		3F3EFFCE2C6257F9008E2945 /* ComponentPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentPoint.swift; sourceTree = "<group>"; };
+		3F3EFFD02C625F70008E2945 /* SideBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarButton.swift; sourceTree = "<group>"; };
 		B83380902C5D2B72006AA587 /* TemplateComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateComponent.swift; sourceTree = "<group>"; };
 		B83380982C5D2DB7006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
-		B833809A2C5D2E03006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B833809C2C5D2E14006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B833809E2C5D2E25006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B83380A02C5D2E3B006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
@@ -142,6 +163,76 @@
 			path = PontoDeskUITests;
 			sourceTree = "<group>";
 		};
+		3F3EFFB02C623C60008E2945 /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				3F3EFFB12C6245E1008E2945 /* Components */,
+				3F3EFFB22C6245F4008E2945 /* SideBar.swift */,
+			);
+			path = SideBar;
+			sourceTree = "<group>";
+		};
+		3F3EFFB12C6245E1008E2945 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3F3EFFB82C6253C0008E2945 /* SideBarLayout.swift */,
+				3F3EFFBA2C6253D9008E2945 /* SideBarManager.swift */,
+				3F3EFFD02C625F70008E2945 /* SideBarButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3F3EFFBE2C625732008E2945 /* Point */ = {
+			isa = PBXGroup;
+			children = (
+				3F3EFFC32C625761008E2945 /* Components */,
+				3F3EFFC12C62575C008E2945 /* PointView.swift */,
+			);
+			path = Point;
+			sourceTree = "<group>";
+		};
+		3F3EFFBF2C625741008E2945 /* BookTable */ = {
+			isa = PBXGroup;
+			children = (
+				3F3EFFC62C62577B008E2945 /* Components */,
+				3F3EFFC42C625771008E2945 /* BookTableView.swift */,
+			);
+			path = BookTable;
+			sourceTree = "<group>";
+		};
+		3F3EFFC02C62574B008E2945 /* BookRoom */ = {
+			isa = PBXGroup;
+			children = (
+				3F3EFFC92C625792008E2945 /* Components */,
+				3F3EFFC72C62578D008E2945 /* BookRoomView.swift */,
+			);
+			path = BookRoom;
+			sourceTree = "<group>";
+		};
+		3F3EFFC32C625761008E2945 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3F3EFFCE2C6257F9008E2945 /* ComponentPoint.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3F3EFFC62C62577B008E2945 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3F3EFFCC2C6257EB008E2945 /* ComponentBookTable.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3F3EFFC92C625792008E2945 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3F3EFFCA2C6257DB008E2945 /* ComponentBookRoom.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		B83380872C5D28F0006AA587 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +244,10 @@
 		B83380882C5D28F6006AA587 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				3F3EFFC02C62574B008E2945 /* BookRoom */,
+				3F3EFFBF2C625741008E2945 /* BookTable */,
+				3F3EFFBE2C625732008E2945 /* Point */,
+				3F3EFFB02C623C60008E2945 /* SideBar */,
 				B833808E2C5D2AC6006AA587 /* TemplateFeature */,
 			);
 			path = Features;
@@ -258,7 +353,7 @@
 		B83380972C5D2D42006AA587 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				B833809A2C5D2E03006AA587 /* .placeholder */,
+				3F3EFFBC2C625701008E2945 /* TabOptions.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -402,8 +497,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F3EFFC22C62575C008E2945 /* PointView.swift in Sources */,
+				3F3EFFCD2C6257EB008E2945 /* ComponentBookTable.swift in Sources */,
+				3F3EFFBB2C6253D9008E2945 /* SideBarManager.swift in Sources */,
 				147ED4202C57B7EE008D4C04 /* ContentView.swift in Sources */,
+				3F3EFFC52C625771008E2945 /* BookTableView.swift in Sources */,
 				B83380912C5D2B72006AA587 /* TemplateComponent.swift in Sources */,
+				3F3EFFD12C625F70008E2945 /* SideBarButton.swift in Sources */,
+				3F3EFFCF2C6257F9008E2945 /* ComponentPoint.swift in Sources */,
+				3F3EFFC82C62578D008E2945 /* BookRoomView.swift in Sources */,
+				3F3EFFBD2C625701008E2945 /* TabOptions.swift in Sources */,
+				3F3EFFCB2C6257DB008E2945 /* ComponentBookRoom.swift in Sources */,
+				3F3EFFB92C6253C0008E2945 /* SideBarLayout.swift in Sources */,
+				3F3EFFB32C6245F4008E2945 /* SideBar.swift in Sources */,
 				147ED41E2C57B7EE008D4C04 /* PontoDeskApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,7 +676,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PontoDesk/Resources\"";
-				DEVELOPMENT_TEAM = 7P3G4Y9CSP;
+				DEVELOPMENT_TEAM = D499HFTXDJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -582,7 +688,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MarceloDeAraujo.PontoDesk;
+				PRODUCT_BUNDLE_IDENTIFIER = YasminCarloto.PontoDesk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -600,7 +706,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PontoDesk/Resources\"";
-				DEVELOPMENT_TEAM = 7P3G4Y9CSP;
+				DEVELOPMENT_TEAM = D499HFTXDJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -612,7 +718,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MarceloDeAraujo.PontoDesk;
+				PRODUCT_BUNDLE_IDENTIFIER = YasminCarloto.PontoDesk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -626,7 +732,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7P3G4Y9CSP;
+				DEVELOPMENT_TEAM = D499HFTXDJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
@@ -645,7 +751,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7P3G4Y9CSP;
+				DEVELOPMENT_TEAM = D499HFTXDJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
@@ -663,7 +769,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7P3G4Y9CSP;
+				DEVELOPMENT_TEAM = D499HFTXDJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MarceloDeAraujo.PontoDeskUITests;
@@ -680,7 +786,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7P3G4Y9CSP;
+				DEVELOPMENT_TEAM = D499HFTXDJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MarceloDeAraujo.PontoDeskUITests;
