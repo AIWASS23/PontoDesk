@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct SideBar: View {
+    @State private var currentTab: TabOptions = .point
+    @State var showTabBar: Bool = true
+    @State var showLegend: Bool = false
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader{reader in
+            let size = reader.size
+            
+            HStack(spacing: 0){
+                SideBarLayout(currentTab: $currentTab, size: size)
+                
+                SideBarManager(hideTabBar: showTabBar, selection: $currentTab){
+                    ForEach(TabOptions.allCases, id: \.rawValue){ tab in
+                        tab.correspondingView
+                            .tag(tab)
+                    }
+                }
+            }.frame(width: size.width, height: size.height, alignment: .leading)
+            
+        }.background()
+            .animation(.snappy(duration: 0.28), value: currentTab)
     }
 }
 

@@ -7,12 +7,47 @@
 
 import SwiftUI
 
-struct SideBarManager: View {
+struct SideBarManager<Content: View, T: Hashable>: View {
+    var hideTabBar: Bool = true
+    @Binding var selection: T
+    @ViewBuilder var content: Content
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.init()){
+            TabView(selection: $selection) {
+                content
+            }
+            .background(TabFinder(hide: hideTabBar))
+        }
     }
 }
 
-#Preview {
-    SideBarManager()
+fileprivate struct TabFinder: NSViewRepresentable{
+    var hide: Bool
+    
+    func updateNSView(_ nsView: NSViewType, context: Context) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+            if let superView = nsView.superview?.superview {
+                if let tabView = superView.subviews(type: NSTabView.self).first{
+                    tabView.tabPosition = hide ? .none : .top
+                    tabView.tabViewBorderType = hide ? .none : .bezel
+                }
+            }
+        }
+    }
+    
+    func makeNSView(context: Context) -> some NSView {
+        return .init()
+    }
+}
+
+fileprivate extension NSView{
+    func subviews<Type: NSView>(type: Type.Type) -> [Type]{
+        var views = subviews.compactMap({$0 as? Type})
+        for subview in subviews{
+            views.append(contentsOf: subview.subviews(type: type))
+        }
+        
+        return views
+    }
 }
