@@ -16,3 +16,9 @@ struct TemplateComponent: View {
 #Preview {
     TemplateComponent()
 }
+
+//struct TemplateComponent_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TemplateComponent()
+//    }
+//}
