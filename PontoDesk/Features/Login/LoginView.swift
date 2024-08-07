@@ -28,9 +28,12 @@ struct LoginView: View {
                         .font(.title.weight(.regular))
                     
                     VStack(alignment: .center){
-                        ButtonLogin(buttonImage: "apple-logo", buttonText: "Login com Apple", parentContainerSize: screenSize)
-                        ButtonLogin(buttonImage: "google-logo", buttonText: "Login com Google", parentContainerSize: screenSize)
-                        ButtonLogin(buttonImage: "github-logo", buttonText: "Login com Github", parentContainerSize: screenSize)
+                        ButtonLogin(buttonImage: "google-logo", buttonText: "Login com Google", parentContainerSize: screenSize){
+                            print("Eu funciona como botão de login do Google")
+                        }
+                        ButtonLogin(buttonImage: "github-logo", buttonText: "Login com Github", parentContainerSize: screenSize){
+                            print("Eu funciono como botão de login do Github")
+                        }
                     }
                 }
             }.padding()

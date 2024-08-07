@@ -8,25 +8,29 @@
 import SwiftUI
 
 struct ButtonLogin: View {
+    var buttonAction: () -> ()
     var buttonImage: String
     var buttonText: String
     var parentContainerSize: GeometryProxy
     
+    init(buttonImage: String, buttonText: String, parentContainerSize: GeometryProxy, buttonAction: @escaping () -> Void) {
+        self.buttonImage = buttonImage
+        self.buttonText = buttonText
+        self.parentContainerSize = parentContainerSize
+        self.buttonAction = buttonAction
+    }
+    
     var body: some View {
-        Button(action: {}, label: {
+        Button(action: {
+            buttonAction()
+        }, label: {
             HStack(alignment: .center){
                 Image(buttonImage)
                 
                 Text(buttonText)
                     .font(.title2.weight(.regular))
             }
-            .frame(width: parentContainerSize.size.width/3, height: parentContainerSize.size.height/24)
-            .padding(6)
-            .background(.bgDarkBlue)
-            .cornerRadius(10)
-            .padding(parentContainerSize.size.width/80)
         })
-        .buttonStyle(PlainButtonStyle())
-        .foregroundColor(.white)
+        .buttonStyle(ButtonLoginStyle(parentContainerSize: parentContainerSize))
     }
 }
