@@ -29,6 +29,9 @@
 		3F3EFFCD2C6257EB008E2945 /* ComponentBookTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFCC2C6257EB008E2945 /* ComponentBookTable.swift */; };
 		3F3EFFCF2C6257F9008E2945 /* ComponentPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFCE2C6257F9008E2945 /* ComponentPoint.swift */; };
 		3F3EFFD12C625F70008E2945 /* SideBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFD02C625F70008E2945 /* SideBarButton.swift */; };
+		3F3EFFD52C62884D008E2945 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFD42C62884D008E2945 /* LoginView.swift */; };
+		3F3EFFD72C62895B008E2945 /* ButtonLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFD62C62895B008E2945 /* ButtonLogin.swift */; };
+		3FF76E722C639FAC008838E6 /* ButtonLoginStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF76E712C639FAC008838E6 /* ButtonLoginStyle.swift */; };
 		B83380912C5D2B72006AA587 /* TemplateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83380902C5D2B72006AA587 /* TemplateComponent.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,13 +77,15 @@
 		3F3EFFCC2C6257EB008E2945 /* ComponentBookTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBookTable.swift; sourceTree = "<group>"; };
 		3F3EFFCE2C6257F9008E2945 /* ComponentPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentPoint.swift; sourceTree = "<group>"; };
 		3F3EFFD02C625F70008E2945 /* SideBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarButton.swift; sourceTree = "<group>"; };
+		3F3EFFD42C62884D008E2945 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3F3EFFD62C62895B008E2945 /* ButtonLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLogin.swift; sourceTree = "<group>"; };
+		3FF76E712C639FAC008838E6 /* ButtonLoginStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLoginStyle.swift; sourceTree = "<group>"; };
 		B83380902C5D2B72006AA587 /* TemplateComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateComponent.swift; sourceTree = "<group>"; };
 		B83380982C5D2DB7006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B833809C2C5D2E14006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B833809E2C5D2E25006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B83380A02C5D2E3B006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B83380A32C5D2E51006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
-		B83380A52C5D2E60006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B83380A72C5D2E74006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -233,6 +238,23 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		3F3EFFD22C628803008E2945 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3F3EFFD32C62880B008E2945 /* Components */,
+				3F3EFFD42C62884D008E2945 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3F3EFFD32C62880B008E2945 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3F3EFFD62C62895B008E2945 /* ButtonLogin.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		B83380872C5D28F0006AA587 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +266,7 @@
 		B83380882C5D28F6006AA587 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				3F3EFFD22C628803008E2945 /* Login */,
 				3F3EFFC02C62574B008E2945 /* BookRoom */,
 				3F3EFFBF2C625741008E2945 /* BookTable */,
 				3F3EFFBE2C625732008E2945 /* Point */,
@@ -321,7 +344,7 @@
 		B83380932C5D2CF3006AA587 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
-				B83380A52C5D2E60006AA587 /* .placeholder */,
+				3FF76E712C639FAC008838E6 /* ButtonLoginStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -498,8 +521,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F3EFFC22C62575C008E2945 /* PointView.swift in Sources */,
+				3F3EFFD72C62895B008E2945 /* ButtonLogin.swift in Sources */,
 				3F3EFFCD2C6257EB008E2945 /* ComponentBookTable.swift in Sources */,
 				3F3EFFBB2C6253D9008E2945 /* SideBarManager.swift in Sources */,
+				3F3EFFD52C62884D008E2945 /* LoginView.swift in Sources */,
 				147ED4202C57B7EE008D4C04 /* ContentView.swift in Sources */,
 				3F3EFFC52C625771008E2945 /* BookTableView.swift in Sources */,
 				B83380912C5D2B72006AA587 /* TemplateComponent.swift in Sources */,
@@ -508,6 +533,7 @@
 				3F3EFFC82C62578D008E2945 /* BookRoomView.swift in Sources */,
 				3F3EFFBD2C625701008E2945 /* TabOptions.swift in Sources */,
 				3F3EFFCB2C6257DB008E2945 /* ComponentBookRoom.swift in Sources */,
+				3FF76E722C639FAC008838E6 /* ButtonLoginStyle.swift in Sources */,
 				3F3EFFB92C6253C0008E2945 /* SideBarLayout.swift in Sources */,
 				3F3EFFB32C6245F4008E2945 /* SideBar.swift in Sources */,
 				147ED41E2C57B7EE008D4C04 /* PontoDeskApp.swift in Sources */,
