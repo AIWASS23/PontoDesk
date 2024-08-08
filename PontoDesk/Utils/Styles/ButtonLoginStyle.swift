@@ -15,12 +15,9 @@ struct ButtonLoginStyle: ButtonStyle {
         configuration.label
             .frame(width: parentContainerSize.size.width/3, height: parentContainerSize.size.height/24)
             .padding(6)
-            .background(buttonClicked ? .bgDarkBlue : .bgBlue)
+            .background(.bgDarkBlue)
             .cornerRadius(10)
             .padding(parentContainerSize.size.width/80)
             .foregroundColor(.white)
-            .onTapGesture {
-                buttonClicked.toggle()
-            }
     }
 }

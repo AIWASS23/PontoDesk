@@ -10,6 +10,7 @@ import FirebaseCore
 
 @main
 struct PontoDeskApp: App {
+    @State var currentUrl: String = ""
     
     init() {
         UserDefaults.standard.register(
@@ -21,9 +22,14 @@ struct PontoDeskApp: App {
     var body: some Scene {
         WindowGroup {
             GeometryReader{reader in
-                LoginView(screenSize: reader)
+                LoginView(screenSize: reader, currentUrl: $currentUrl)
                     .background(.bgScreen)
             }
+        
         }
+        Window("Entrar no PontoDesk", id: "auth"){
+            LoginWebView(url: self.currentUrl)
+                    .frame(minWidth: 900, maxWidth: 900, minHeight: 450, maxHeight: 450)
+        }.windowResizability(.contentSize)
     }
 }
