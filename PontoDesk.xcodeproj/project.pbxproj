@@ -16,6 +16,7 @@
 		147ED43A2C57B7F0008D4C04 /* PontoDeskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147ED4392C57B7F0008D4C04 /* PontoDeskUITests.swift */; };
 		147ED43C2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147ED43B2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift */; };
 		14D80B8F2C64EF3F00CF9285 /* ReserveRoomTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D80B8E2C64EF3F00CF9285 /* ReserveRoomTime.swift */; };
+		14D80B912C650FDB00CF9285 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D80B902C650FDB00CF9285 /* Layout.swift */; };
 		14EB74752C5912A60006B201 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74742C5912A60006B201 /* FirebaseAuth */; };
 		14EB74812C5912A60006B201 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74802C5912A60006B201 /* FirebaseFirestore */; };
 		14EB749B2C5912A60006B201 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB749A2C5912A60006B201 /* FirebaseStorage */; };
@@ -67,6 +68,7 @@
 		147ED4392C57B7F0008D4C04 /* PontoDeskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoDeskUITests.swift; sourceTree = "<group>"; };
 		147ED43B2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoDeskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		14D80B8E2C64EF3F00CF9285 /* ReserveRoomTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveRoomTime.swift; sourceTree = "<group>"; };
+		14D80B902C650FDB00CF9285 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		14EB74A22C5919150006B201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F3EFFB22C6245F4008E2945 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		3F3EFFB82C6253C0008E2945 /* SideBarLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarLayout.swift; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				B833809E2C5D2E25006AA587 /* .placeholder */,
+				14D80B902C650FDB00CF9285 /* Layout.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				3F3EFFC82C62578D008E2945 /* BookRoomView.swift in Sources */,
 				3F3EFFBD2C625701008E2945 /* TabOptions.swift in Sources */,
 				3F3EFFCB2C6257DB008E2945 /* ComponentBookRoom.swift in Sources */,
+				14D80B912C650FDB00CF9285 /* Layout.swift in Sources */,
 				3FF76E722C639FAC008838E6 /* ButtonLoginStyle.swift in Sources */,
 				14D80B8F2C64EF3F00CF9285 /* ReserveRoomTime.swift in Sources */,
 				3F3EFFB92C6253C0008E2945 /* SideBarLayout.swift in Sources */,
