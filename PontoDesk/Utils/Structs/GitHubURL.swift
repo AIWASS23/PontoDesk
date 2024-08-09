@@ -10,7 +10,7 @@ import Foundation
 struct GitHubURL: LoginPlataformProtocol {
     var scheme: String = "https"
     var host: String = "github.com"
-    var path: String = "o/oauth2/v2/auth"
+    var path: String = "/login/oauth/authorize"
     var client_id: String
     var redirect_uri: String
     var scope: String = "user:email"
