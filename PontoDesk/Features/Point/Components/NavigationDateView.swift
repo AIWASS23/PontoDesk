@@ -1,18 +1,18 @@
 //
-//  ComponentPoint.swift
+//  NavigationDateView.swift
 //  PontoDesk
 //
-//  Created by Yasmin Carloto on 06/08/24.
+//  Created by Ricardo Silva Vale on 09/08/24.
 //
 
 import SwiftUI
 
-struct ComponentPoint: View {
+struct NavigationDateView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    ComponentPoint()
+    NavigationDateView()
 }
