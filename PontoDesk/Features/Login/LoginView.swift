@@ -13,14 +13,14 @@ struct LoginView: View {
     @Binding var currentUrl: URL
     
     private let urlGoogle = GoogleURL(client_id: "xxxx", redirect_uri: "xxxx")
-    private let urlGitHub = GitHubURL(client_id: "xxxx", redirect_uri: "xxxx")
-    
+    private let urlGitHub = GitHubURL(client_id: "Ov23liGARcYKfhDcZ4yo", redirect_uri: "https://ncvvjec7c7.execute-api.us-east-2.amazonaws.com/auth/auth/github")
+        
     var body: some View {
         HStack(alignment: .center){
-           Image("login-image")
+            Image("login-image")
                 .resizable()
                 .scaledToFit()
-                        
+            
             VStack(alignment: .center){
                 VStack(alignment: .center){
                     Image("logo-pontodesk")
@@ -39,18 +39,18 @@ struct LoginView: View {
                                 openWindow(id: "auth")
                                 print("Eu funciono como botão de login do Google")
                             }else{
-                                print("Canoot open passed URL")
+                                print("Can not open passed URL")
                             }
                         }
+                        
                         ButtonLogin(buttonImage: "github-logo", buttonText: "Login com Github", parentContainerSize: screenSize){
-                            if let url = urlGitHub.url{
+                            if let url = urlGitHub.url {
                                 currentUrl = url
                                 openWindow(id: "auth")
                                 print("Eu funciono como botão de login do GitHub")
                             }else{
-                                print("Canoot open passed URL")
+                                print("Can not open passed URL")
                             }
-                            
                         }
                     }
                 }
