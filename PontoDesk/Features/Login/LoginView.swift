@@ -10,7 +10,10 @@ import SwiftUI
 struct LoginView: View {
     var screenSize: GeometryProxy
     @Environment (\.openWindow) var openWindow
-    @Binding var currentUrl: String
+    @Binding var currentUrl: URL
+    
+    private let urlGoogle = GoogleURL(client_id: "xxxx", redirect_uri: "xxxx")
+    private let urlGitHub = GitHubURL(client_id: "xxxx", redirect_uri: "xxxx")
     
     var body: some View {
         HStack(alignment: .center){
@@ -31,14 +34,23 @@ struct LoginView: View {
                     
                     VStack(alignment: .center){
                         ButtonLogin(buttonImage: "google-logo", buttonText: "Login com Google", parentContainerSize: screenSize){
-                            currentUrl = "https://www.youtube.com/watch?v=FhPLQVlUiNQ&list=RDZHDnDv6qjs8&index=7"
-                            openWindow(id: "auth1")
-                            print("Eu funciono como botão de login do Google")
+                            if let url = urlGoogle.url {
+                                currentUrl = url
+                                openWindow(id: "auth")
+                                print("Eu funciono como botão de login do Google")
+                            }else{
+                                print("Canoot open passed URL")
+                            }
                         }
                         ButtonLogin(buttonImage: "github-logo", buttonText: "Login com Github", parentContainerSize: screenSize){
-                            currentUrl = "https://github.com/AIWASS23/PontoDesk"
-                            openWindow(id: "auth")
-                            print("Eu funciono como botão de login do Github")
+                            if let url = urlGitHub.url{
+                                currentUrl = url
+                                openWindow(id: "auth")
+                                print("Eu funciono como botão de login do GitHub")
+                            }else{
+                                print("Canoot open passed URL")
+                            }
+                            
                         }
                     }
                 }

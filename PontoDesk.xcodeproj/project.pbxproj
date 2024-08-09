@@ -31,6 +31,9 @@
 		3F3EFFD12C625F70008E2945 /* SideBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFD02C625F70008E2945 /* SideBarButton.swift */; };
 		3F3EFFD52C62884D008E2945 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFD42C62884D008E2945 /* LoginView.swift */; };
 		3F3EFFD72C62895B008E2945 /* ButtonLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFD62C62895B008E2945 /* ButtonLogin.swift */; };
+		3F8151422C66322300FC5072 /* GitHubURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8151412C66322300FC5072 /* GitHubURL.swift */; };
+		3F8151442C66323E00FC5072 /* GoogleURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8151432C66323E00FC5072 /* GoogleURL.swift */; };
+		3F8151462C66413400FC5072 /* LoginPlataformProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8151452C66413400FC5072 /* LoginPlataformProtocol.swift */; };
 		3FDC90E62C64F4C1003889AB /* LoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC90E52C64F4C1003889AB /* LoginWebView.swift */; };
 		3FF76E722C639FAC008838E6 /* ButtonLoginStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF76E712C639FAC008838E6 /* ButtonLoginStyle.swift */; };
 		B83380912C5D2B72006AA587 /* TemplateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83380902C5D2B72006AA587 /* TemplateComponent.swift */; };
@@ -80,14 +83,14 @@
 		3F3EFFD02C625F70008E2945 /* SideBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarButton.swift; sourceTree = "<group>"; };
 		3F3EFFD42C62884D008E2945 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3F3EFFD62C62895B008E2945 /* ButtonLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLogin.swift; sourceTree = "<group>"; };
+		3F8151412C66322300FC5072 /* GitHubURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubURL.swift; sourceTree = "<group>"; };
+		3F8151432C66323E00FC5072 /* GoogleURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleURL.swift; sourceTree = "<group>"; };
+		3F8151452C66413400FC5072 /* LoginPlataformProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPlataformProtocol.swift; sourceTree = "<group>"; };
 		3FDC90E52C64F4C1003889AB /* LoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWebView.swift; sourceTree = "<group>"; };
 		3FF76E712C639FAC008838E6 /* ButtonLoginStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLoginStyle.swift; sourceTree = "<group>"; };
 		B83380902C5D2B72006AA587 /* TemplateComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateComponent.swift; sourceTree = "<group>"; };
 		B83380982C5D2DB7006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B833809C2C5D2E14006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
-		B833809E2C5D2E25006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
-		B83380A02C5D2E3B006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
-		B83380A32C5D2E51006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B83380A72C5D2E74006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -355,7 +358,8 @@
 		B83380922C5D2CEB006AA587 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
-				B83380A32C5D2E51006AA587 /* .placeholder */,
+				3F8151412C66322300FC5072 /* GitHubURL.swift */,
+				3F8151432C66323E00FC5072 /* GoogleURL.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -371,7 +375,7 @@
 		B83380942C5D2CFA006AA587 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				B83380A02C5D2E3B006AA587 /* .placeholder */,
+				3F8151452C66413400FC5072 /* LoginPlataformProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -379,7 +383,6 @@
 		B83380952C5D2D02006AA587 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B833809E2C5D2E25006AA587 /* .placeholder */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -554,8 +557,11 @@
 				3F3EFFBD2C625701008E2945 /* TabOptions.swift in Sources */,
 				3F3EFFCB2C6257DB008E2945 /* ComponentBookRoom.swift in Sources */,
 				3FF76E722C639FAC008838E6 /* ButtonLoginStyle.swift in Sources */,
+				3F8151422C66322300FC5072 /* GitHubURL.swift in Sources */,
 				3F3EFFB92C6253C0008E2945 /* SideBarLayout.swift in Sources */,
 				3F3EFFB32C6245F4008E2945 /* SideBar.swift in Sources */,
+				3F8151442C66323E00FC5072 /* GoogleURL.swift in Sources */,
+				3F8151462C66413400FC5072 /* LoginPlataformProtocol.swift in Sources */,
 				147ED41E2C57B7EE008D4C04 /* PontoDeskApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
