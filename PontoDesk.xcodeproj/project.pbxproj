@@ -18,6 +18,7 @@
 		14EB74752C5912A60006B201 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74742C5912A60006B201 /* FirebaseAuth */; };
 		14EB74812C5912A60006B201 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74802C5912A60006B201 /* FirebaseFirestore */; };
 		14EB749B2C5912A60006B201 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB749A2C5912A60006B201 /* FirebaseStorage */; };
+		212975C52C668EF800905CE5 /* ComponentsPointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212975C42C668EF800905CE5 /* ComponentsPointViewModel.swift */; };
 		3F3EFFB32C6245F4008E2945 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFB22C6245F4008E2945 /* SideBar.swift */; };
 		3F3EFFB92C6253C0008E2945 /* SideBarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFB82C6253C0008E2945 /* SideBarLayout.swift */; };
 		3F3EFFBB2C6253D9008E2945 /* SideBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFBA2C6253D9008E2945 /* SideBarManager.swift */; };
@@ -66,6 +67,7 @@
 		147ED4392C57B7F0008D4C04 /* PontoDeskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoDeskUITests.swift; sourceTree = "<group>"; };
 		147ED43B2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoDeskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		14EB74A22C5919150006B201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		212975C42C668EF800905CE5 /* ComponentsPointViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentsPointViewModel.swift; sourceTree = "<group>"; };
 		3F3EFFB22C6245F4008E2945 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		3F3EFFB82C6253C0008E2945 /* SideBarLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarLayout.swift; sourceTree = "<group>"; };
 		3F3EFFBA2C6253D9008E2945 /* SideBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarManager.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				3F3EFFCE2C6257F9008E2945 /* ComponentPoint.swift */,
+				212975C42C668EF800905CE5 /* ComponentsPointViewModel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				3F3EFFCD2C6257EB008E2945 /* ComponentBookTable.swift in Sources */,
 				3F3EFFBB2C6253D9008E2945 /* SideBarManager.swift in Sources */,
 				3F3EFFD52C62884D008E2945 /* LoginView.swift in Sources */,
+				212975C52C668EF800905CE5 /* ComponentsPointViewModel.swift in Sources */,
 				147ED4202C57B7EE008D4C04 /* ContentView.swift in Sources */,
 				3F3EFFC52C625771008E2945 /* BookTableView.swift in Sources */,
 				B83380912C5D2B72006AA587 /* TemplateComponent.swift in Sources */,
