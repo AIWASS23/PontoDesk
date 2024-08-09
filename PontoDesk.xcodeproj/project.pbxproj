@@ -17,6 +17,7 @@
 		147ED43C2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147ED43B2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift */; };
 		14D80B8F2C64EF3F00CF9285 /* ReserveRoomTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D80B8E2C64EF3F00CF9285 /* ReserveRoomTime.swift */; };
 		14D80B912C650FDB00CF9285 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D80B902C650FDB00CF9285 /* Layout.swift */; };
+		14D80B932C66447100CF9285 /* ShiftWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D80B922C66447100CF9285 /* ShiftWork.swift */; };
 		14EB74752C5912A60006B201 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74742C5912A60006B201 /* FirebaseAuth */; };
 		14EB74812C5912A60006B201 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74802C5912A60006B201 /* FirebaseFirestore */; };
 		14EB749B2C5912A60006B201 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB749A2C5912A60006B201 /* FirebaseStorage */; };
@@ -69,6 +70,7 @@
 		147ED43B2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoDeskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		14D80B8E2C64EF3F00CF9285 /* ReserveRoomTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveRoomTime.swift; sourceTree = "<group>"; };
 		14D80B902C650FDB00CF9285 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		14D80B922C66447100CF9285 /* ShiftWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftWork.swift; sourceTree = "<group>"; };
 		14EB74A22C5919150006B201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F3EFFB22C6245F4008E2945 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		3F3EFFB82C6253C0008E2945 /* SideBarLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarLayout.swift; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 			isa = PBXGroup;
 			children = (
 				3F3EFFBC2C625701008E2945 /* TabOptions.swift */,
+				14D80B922C66447100CF9285 /* ShiftWork.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				3F3EFFC22C62575C008E2945 /* PointView.swift in Sources */,
 				3F3EFFD72C62895B008E2945 /* ButtonLogin.swift in Sources */,
 				3F3EFFCD2C6257EB008E2945 /* ComponentBookTable.swift in Sources */,
+				14D80B932C66447100CF9285 /* ShiftWork.swift in Sources */,
 				3F3EFFBB2C6253D9008E2945 /* SideBarManager.swift in Sources */,
 				3F3EFFD52C62884D008E2945 /* LoginView.swift in Sources */,
 				147ED4202C57B7EE008D4C04 /* ContentView.swift in Sources */,
