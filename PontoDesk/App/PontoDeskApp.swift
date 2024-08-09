@@ -10,7 +10,7 @@ import FirebaseCore
 
 @main
 struct PontoDeskApp: App {
-    @State var currentUrl: String = ""
+    @State var currentUrl: URL
     
     init() {
         UserDefaults.standard.register(
