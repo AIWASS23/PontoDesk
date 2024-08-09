@@ -12,9 +12,6 @@ struct LoginView: View {
     @Environment (\.openWindow) var openWindow
     @Binding var currentUrl: String
     
-    var baseURLGitHub = "https://github.com/login/oauth/authorize?client_id=xxxxxxx&redirect_id=xxxxxxx&scopes=user:email"
-    var baseURLGoogle = "https://accounts.google.com/o/oauth2/v2/auth?client_id=xxxxxx&redirect-uri=xxxx&response_type=xxxxxxx&scope"
-    
     var body: some View {
         HStack(alignment: .center){
            Image("login-image")
@@ -43,9 +40,6 @@ struct LoginView: View {
                             openWindow(id: "auth")
                             print("Eu funciono como botão de login do Github")
                         }
-                    }
-                    .onChange(of: currentUrl){
-                        print(currentUrl)
                     }
                 }
             }.padding()
