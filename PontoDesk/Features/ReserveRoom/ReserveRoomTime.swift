@@ -11,137 +11,142 @@ import SwiftUI
 struct RoomReservationView: View {
     @State private var name: String = ""
     @State private var selectedShift: ShiftWork = .morning
-    
-    @State private var entryTimeIndex: Date = Calendar.current.date(
-        bySettingHour: 8,
-        minute: 0,
-        second: 0, of: Date())!
-    
+    @State private var entryTimeIndex: Date = Date()
+
     @State private var exitTimeIndex: Date = Calendar.current.date(
         bySettingHour: 9,
         minute: 0,
         second: 0, of: Date())!
-    
+
     var body: some View {
         VStack(spacing: 20) {
-            Text("Reserva de Sala")
+            Text("Reservar para Hoje")
                 .font(.largeTitle)
                 .padding(.top, 20)
-            
+
             TextField("Quem vai usar a sala?", text: $name)
                 .textFieldStyle(.roundedBorder)
                 .padding(.horizontal)
                 .overlay(
                     RoundedRectangle(cornerRadius: 7)
-                        .stroke(.blue, lineWidth: 1)
+                        .stroke(.blue, lineWidth: 0.5)
                         .padding(.horizontal)
                 )
-            Picker("Escolha seu Turno", selection: $selectedShift) {
+
+
+            Picker("", selection: $selectedShift) {
                 ForEach(ShiftWork.allCases) { shift in
                     Text(shift.rawValue).tag(shift)
                 }
             }
+            .onChange(of: selectedShift) { _, _ in
+                adjustTimesForShift()
+            }
             .pickerStyle(.segmented)
-            .padding(.horizontal)
-            
+            .tint(.blue)
+            .padding(.horizontal, 6)
+            .padding(.trailing, 6)
+
             DatePicker(
                 "Horário de Entrada",
                 selection: $entryTimeIndex,
                 in: selectedShift.timeRange,
                 displayedComponents: .hourAndMinute
             )
+            .onChange(of: selectedShift) { _, _ in
+                adjustTimesForShift()
+            }
+
             .onChange(of: entryTimeIndex) { _, newValue in
+                entryTimeIndex = Date()
                 adjustEntryTime(newValue)
             }
             .datePickerStyle(.stepperField)
             .hLeading()
             .padding(.horizontal)
-            
+
             DatePicker(
                 "Horário de Saída",
                 selection: $exitTimeIndex,
                 in: entryTimeIndex...selectedShift.timeRange.upperBound,
                 displayedComponents: .hourAndMinute
             )
-            .padding(.horizontal)
             .onChange(of: exitTimeIndex) { _, newValue in
                 adjustExitTime(newValue)
             }
+            .padding(.horizontal)
             .datePickerStyle(.stepperField)
             .hLeading()
-            
+
             Spacer()
-            
+
             Button(action: {
                 reserveRoom()
             }) {
                 Text("Reservar Sala")
-                    .foregroundColor(.white)
                     .padding()
                     .background(Color.blue)
                     .cornerRadius(10)
             }
             .padding(.bottom, 20)
+            .buttonStyle(PlainButtonStyle())
+
         }
+        .background(Color("bg-dark-blue"))
+        .preferredColorScheme(.dark)
     }
     
     func adjustTimesForShift() {
         let calendar = Calendar.current
+        entryTimeIndex = Date()
         
-        // Atualiza os horários de entrada e saída com base no turno selecionado
-        entryTimeIndex = selectedShift.timeRange.lowerBound
-        exitTimeIndex = calendar.date(byAdding: .hour, value: 1, to: entryTimeIndex)!
+        if !selectedShift.timeRange.contains(entryTimeIndex) {
+            entryTimeIndex = selectedShift.timeRange.lowerBound
+        }
+
+        if exitTimeIndex < entryTimeIndex || !selectedShift.timeRange.contains(exitTimeIndex) {
+            exitTimeIndex = calendar.date(byAdding: .hour, value: 1, to: entryTimeIndex) ?? selectedShift.timeRange.upperBound
+        }
     }
-    
+
     func adjustEntryTime(_ newValue: Date) {
-        // Ajusta o horário de entrada para garantir que esteja dentro do intervalo e antes do horário de saída
         if newValue >= exitTimeIndex {
             entryTimeIndex = Calendar.current.date(
-                bySettingHour: Calendar.current.component(.hour, from: exitTimeIndex),
-                minute: Calendar.current.component(.minute, from: exitTimeIndex) - 15,
-                second: 0,
-                of: exitTimeIndex)!
+                byAdding: .minute,
+                value: -15,
+                to: exitTimeIndex
+            ) ?? selectedShift.timeRange.lowerBound
         }
     }
-    
+
     func adjustExitTime(_ newValue: Date) {
-        // Ajusta o horário de saída para garantir que esteja dentro do intervalo e após o horário de entrada
         if newValue <= entryTimeIndex {
             exitTimeIndex = Calendar.current.date(
-                bySettingHour: Calendar.current.component(.hour, from: entryTimeIndex),
-                minute: Calendar.current.component(.minute, from: entryTimeIndex) + 15,
-                second: 0,
-                of: entryTimeIndex)!
+                byAdding: .minute,
+                value: 15,
+                to: entryTimeIndex
+            ) ?? selectedShift.timeRange.upperBound
+        }
+        
+        if newValue > selectedShift.timeRange.upperBound {
+            exitTimeIndex = selectedShift.timeRange.upperBound
         }
     }
     
-//    func adjustEntryTime(_ newValue: Date) {
-//        if newValue >= exitTimeIndex {
-//            entryTimeIndex = Calendar.current.date(
-//                bySettingHour: Calendar.current.component(.hour, from: exitTimeIndex),
-//                minute: Calendar.current.component(.minute, from: exitTimeIndex) - 15,
-//                second: 0,
-//                of: exitTimeIndex)!
-//        }
-//    }
-//    
-//    func adjustExitTime(_ newValue: Date) {
-//        if newValue <= entryTimeIndex {
-//            exitTimeIndex = Calendar.current.date(
-//                bySettingHour: Calendar.current.component(.hour, from: entryTimeIndex),
-//                minute: Calendar.current.component(.minute, from: entryTimeIndex) + 15,
-//                second: 0,
-//                of: entryTimeIndex)!
-//        }
-//    }
     
     func reserveRoom() {
+        if entryTimeIndex >= exitTimeIndex {
+            print("Horário inválido: O horário de entrada deve ser antes do horário de saída.")
+            return
+        }
+
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
         let entryTimeString = formatter.string(from: entryTimeIndex)
         let exitTimeString = formatter.string(from: exitTimeIndex)
         print("Sala reservada por \(name) das \(entryTimeString) às \(exitTimeString)")
     }
+
 }
 
 #Preview {

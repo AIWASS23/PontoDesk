@@ -15,6 +15,7 @@
 		147ED4302C57B7F0008D4C04 /* PontoDeskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147ED42F2C57B7F0008D4C04 /* PontoDeskTests.swift */; };
 		147ED43A2C57B7F0008D4C04 /* PontoDeskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147ED4392C57B7F0008D4C04 /* PontoDeskUITests.swift */; };
 		147ED43C2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147ED43B2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift */; };
+		148336302C6A254800E5B6EF /* Extension+ShiftWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483362F2C6A254800E5B6EF /* Extension+ShiftWork.swift */; };
 		14D80B8F2C64EF3F00CF9285 /* ReserveRoomTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D80B8E2C64EF3F00CF9285 /* ReserveRoomTime.swift */; };
 		14D80B912C650FDB00CF9285 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D80B902C650FDB00CF9285 /* Layout.swift */; };
 		14D80B932C66447100CF9285 /* ShiftWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D80B922C66447100CF9285 /* ShiftWork.swift */; };
@@ -68,6 +69,7 @@
 		147ED4352C57B7F0008D4C04 /* PontoDeskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PontoDeskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		147ED4392C57B7F0008D4C04 /* PontoDeskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoDeskUITests.swift; sourceTree = "<group>"; };
 		147ED43B2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoDeskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1483362F2C6A254800E5B6EF /* Extension+ShiftWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+ShiftWork.swift"; sourceTree = "<group>"; };
 		14D80B8E2C64EF3F00CF9285 /* ReserveRoomTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveRoomTime.swift; sourceTree = "<group>"; };
 		14D80B902C650FDB00CF9285 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		14D80B922C66447100CF9285 /* ShiftWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftWork.swift; sourceTree = "<group>"; };
@@ -89,7 +91,6 @@
 		B83380902C5D2B72006AA587 /* TemplateComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateComponent.swift; sourceTree = "<group>"; };
 		B83380982C5D2DB7006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B833809C2C5D2E14006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
-		B833809E2C5D2E25006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B83380A02C5D2E3B006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B83380A32C5D2E51006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B83380A72C5D2E74006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
@@ -375,8 +376,8 @@
 		B83380952C5D2D02006AA587 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B833809E2C5D2E25006AA587 /* .placeholder */,
 				14D80B902C650FDB00CF9285 /* Layout.swift */,
+				1483362F2C6A254800E5B6EF /* Extension+ShiftWork.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -550,6 +551,7 @@
 				3F3EFFCF2C6257F9008E2945 /* ComponentPoint.swift in Sources */,
 				3F3EFFC82C62578D008E2945 /* BookRoomView.swift in Sources */,
 				3F3EFFBD2C625701008E2945 /* TabOptions.swift in Sources */,
+				148336302C6A254800E5B6EF /* Extension+ShiftWork.swift in Sources */,
 				3F3EFFCB2C6257DB008E2945 /* ComponentBookRoom.swift in Sources */,
 				14D80B912C650FDB00CF9285 /* Layout.swift in Sources */,
 				3FF76E722C639FAC008838E6 /* ButtonLoginStyle.swift in Sources */,
