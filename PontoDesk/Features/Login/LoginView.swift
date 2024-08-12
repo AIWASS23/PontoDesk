@@ -36,7 +36,6 @@ struct LoginView: View {
                         ButtonLogin(buttonImage: "google-logo", buttonText: "Login com Google", parentContainerSize: screenSize){
                             if let url = urlGoogle.url {
                                 currentUrl = url
-                                
                                 openWindow(id: "auth")
                                 print("Eu funciono como botão de login do Google")
                             }else{
@@ -47,9 +46,7 @@ struct LoginView: View {
                         ButtonLogin(buttonImage: "github-logo", buttonText: "Login com Github", parentContainerSize: screenSize){
                             if let url = urlGitHub.url {
                                 currentUrl = url
-                                print(urlGitHub.url?.absoluteString)
                                 openWindow(id: "auth")
-                                print("Eu funciono como botão de login do GitHub")
                             }else{
                                 print("Can not open passed URL")
                             }
