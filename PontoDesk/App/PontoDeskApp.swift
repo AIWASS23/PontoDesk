@@ -11,8 +11,9 @@ import FirebaseCore
 @main
 struct PontoDeskApp: App {
     @State var currentUrl: URL = URL(fileURLWithPath: "")
+    var loginViewModel = LoginViewModel()
     @AppStorage("userToken") var userToken = ""
-    
+
     init() {
         UserDefaults.standard.register(
             defaults: ["NSApplicationCrashOnExceptions": true]
@@ -33,7 +34,8 @@ struct PontoDeskApp: App {
             .onOpenURL(perform: { url in
                 if let component =  URLComponents(url: url, resolvingAgainstBaseURL: true){
                     guard let token = component.queryItems?[0].value else { return }
-                    self.userToken = token
+                    loginViewModel.setToken(token: token)
+                    loginViewModel.setName()
                 }
             })
             .handlesExternalEvents(preferring: ["pontodesk"], allowing: ["pontodesk"])

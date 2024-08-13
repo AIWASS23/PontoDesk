@@ -31,10 +31,12 @@
 		3F3EFFD12C625F70008E2945 /* SideBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFD02C625F70008E2945 /* SideBarButton.swift */; };
 		3F3EFFD52C62884D008E2945 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFD42C62884D008E2945 /* LoginView.swift */; };
 		3F3EFFD72C62895B008E2945 /* ButtonLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFD62C62895B008E2945 /* ButtonLogin.swift */; };
+		3F560BE72C6B9CFF002B0846 /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = 3F560BE62C6B9CFF002B0846 /* JWTDecode */; };
 		3F8151422C66322300FC5072 /* GitHubURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8151412C66322300FC5072 /* GitHubURL.swift */; };
 		3F8151442C66323E00FC5072 /* GoogleURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8151432C66323E00FC5072 /* GoogleURL.swift */; };
 		3F8151462C66413400FC5072 /* LoginPlataformProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8151452C66413400FC5072 /* LoginPlataformProtocol.swift */; };
 		3FDC90E62C64F4C1003889AB /* LoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC90E52C64F4C1003889AB /* LoginWebView.swift */; };
+		3FE20C4E2C6B882800D77386 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE20C4D2C6B882800D77386 /* LoginViewModel.swift */; };
 		3FF76E722C639FAC008838E6 /* ButtonLoginStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF76E712C639FAC008838E6 /* ButtonLoginStyle.swift */; };
 		B83380912C5D2B72006AA587 /* TemplateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83380902C5D2B72006AA587 /* TemplateComponent.swift */; };
 /* End PBXBuildFile section */
@@ -87,6 +89,7 @@
 		3F8151432C66323E00FC5072 /* GoogleURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleURL.swift; sourceTree = "<group>"; };
 		3F8151452C66413400FC5072 /* LoginPlataformProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPlataformProtocol.swift; sourceTree = "<group>"; };
 		3FDC90E52C64F4C1003889AB /* LoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWebView.swift; sourceTree = "<group>"; };
+		3FE20C4D2C6B882800D77386 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		3FF76E712C639FAC008838E6 /* ButtonLoginStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLoginStyle.swift; sourceTree = "<group>"; };
 		B83380902C5D2B72006AA587 /* TemplateComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateComponent.swift; sourceTree = "<group>"; };
 		B83380982C5D2DB7006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 			files = (
 				14EB74812C5912A60006B201 /* FirebaseFirestore in Frameworks */,
 				14EB74752C5912A60006B201 /* FirebaseAuth in Frameworks */,
+				3F560BE72C6B9CFF002B0846 /* JWTDecode in Frameworks */,
 				14EB749B2C5912A60006B201 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +252,7 @@
 			children = (
 				3F3EFFD32C62880B008E2945 /* Components */,
 				3F3EFFD42C62884D008E2945 /* LoginView.swift */,
+				3FE20C4D2C6B882800D77386 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -423,6 +428,7 @@
 				14EB74742C5912A60006B201 /* FirebaseAuth */,
 				14EB74802C5912A60006B201 /* FirebaseFirestore */,
 				14EB749A2C5912A60006B201 /* FirebaseStorage */,
+				3F560BE62C6B9CFF002B0846 /* JWTDecode */,
 			);
 			productName = PontoDesk;
 			productReference = 147ED41A2C57B7EE008D4C04 /* PontoDesk.app */;
@@ -498,6 +504,7 @@
 			mainGroup = 147ED4112C57B7EE008D4C04;
 			packageReferences = (
 				14EB74652C5910480006B201 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3F560BE52C6B9CFF002B0846 /* XCRemoteSwiftPackageReference "JWTDecode.swift" */,
 			);
 			productRefGroup = 147ED41B2C57B7EE008D4C04 /* Products */;
 			projectDirPath = "";
@@ -544,6 +551,7 @@
 			files = (
 				3F3EFFC22C62575C008E2945 /* PointView.swift in Sources */,
 				3FDC90E62C64F4C1003889AB /* LoginWebView.swift in Sources */,
+				3FE20C4E2C6B882800D77386 /* LoginViewModel.swift in Sources */,
 				3F3EFFD72C62895B008E2945 /* ButtonLogin.swift in Sources */,
 				3F3EFFCD2C6257EB008E2945 /* ComponentBookTable.swift in Sources */,
 				3F3EFFBB2C6253D9008E2945 /* SideBarManager.swift in Sources */,
@@ -899,6 +907,14 @@
 				minimumVersion = 10.29.0;
 			};
 		};
+		3F560BE52C6B9CFF002B0846 /* XCRemoteSwiftPackageReference "JWTDecode.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/JWTDecode.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -916,6 +932,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 14EB74652C5910480006B201 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		3F560BE62C6B9CFF002B0846 /* JWTDecode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F560BE52C6B9CFF002B0846 /* XCRemoteSwiftPackageReference "JWTDecode.swift" */;
+			productName = JWTDecode;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
