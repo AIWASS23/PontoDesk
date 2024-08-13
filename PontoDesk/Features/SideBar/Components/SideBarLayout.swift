@@ -12,7 +12,7 @@ struct SideBarLayout: View {
     var size: CGSize
     @State private var showLegend = false
     @AppStorage("userToken") var userToken = ""
-
+    var loginViewModel = LoginViewModel()
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -33,7 +33,7 @@ struct SideBarLayout: View {
             Spacer()
             
             SideBarButton(buttonAction: {
-                userToken.removeAll()
+                loginViewModel.emptyToken()
             }, showLegend: $showLegend, tabName: "Logout", tabIcon: "logout-icon", currentTab: $currentTab)
             
             Spacer()
