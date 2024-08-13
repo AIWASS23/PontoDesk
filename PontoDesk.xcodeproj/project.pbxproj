@@ -22,6 +22,10 @@
 		14EB74752C5912A60006B201 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74742C5912A60006B201 /* FirebaseAuth */; };
 		14EB74812C5912A60006B201 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74802C5912A60006B201 /* FirebaseFirestore */; };
 		14EB749B2C5912A60006B201 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB749A2C5912A60006B201 /* FirebaseStorage */; };
+		14FBF6152C6B7D9B0027A065 /* ReserveRoomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FBF6142C6B7D9B0027A065 /* ReserveRoomCard.swift */; };
+		14FBF6172C6B7F050027A065 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FBF6162C6B7F050027A065 /* Reservation.swift */; };
+		14FBF6192C6B90730027A065 /* ReserveRoomDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FBF6182C6B90730027A065 /* ReserveRoomDay.swift */; };
+		14FBF61B2C6B92160027A065 /* ReserveRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FBF61A2C6B92160027A065 /* ReserveRoomView.swift */; };
 		3F3EFFB32C6245F4008E2945 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFB22C6245F4008E2945 /* SideBar.swift */; };
 		3F3EFFB92C6253C0008E2945 /* SideBarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFB82C6253C0008E2945 /* SideBarLayout.swift */; };
 		3F3EFFBB2C6253D9008E2945 /* SideBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFBA2C6253D9008E2945 /* SideBarManager.swift */; };
@@ -74,6 +78,10 @@
 		14D80B902C650FDB00CF9285 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		14D80B922C66447100CF9285 /* ShiftWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftWork.swift; sourceTree = "<group>"; };
 		14EB74A22C5919150006B201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14FBF6142C6B7D9B0027A065 /* ReserveRoomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveRoomCard.swift; sourceTree = "<group>"; };
+		14FBF6162C6B7F050027A065 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		14FBF6182C6B90730027A065 /* ReserveRoomDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveRoomDay.swift; sourceTree = "<group>"; };
+		14FBF61A2C6B92160027A065 /* ReserveRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveRoomView.swift; sourceTree = "<group>"; };
 		3F3EFFB22C6245F4008E2945 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		3F3EFFB82C6253C0008E2945 /* SideBarLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarLayout.swift; sourceTree = "<group>"; };
 		3F3EFFBA2C6253D9008E2945 /* SideBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarManager.swift; sourceTree = "<group>"; };
@@ -92,7 +100,6 @@
 		B83380982C5D2DB7006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B833809C2C5D2E14006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B83380A02C5D2E3B006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
-		B83380A32C5D2E51006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B83380A72C5D2E74006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +186,9 @@
 			isa = PBXGroup;
 			children = (
 				14D80B8E2C64EF3F00CF9285 /* ReserveRoomTime.swift */,
+				14FBF6142C6B7D9B0027A065 /* ReserveRoomCard.swift */,
+				14FBF6182C6B90730027A065 /* ReserveRoomDay.swift */,
+				14FBF61A2C6B92160027A065 /* ReserveRoomView.swift */,
 			);
 			path = ReserveRoom;
 			sourceTree = "<group>";
@@ -352,7 +362,7 @@
 		B83380922C5D2CEB006AA587 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
-				B83380A32C5D2E51006AA587 /* .placeholder */,
+				14FBF6162C6B7F050027A065 /* Reservation.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -551,7 +561,11 @@
 				3F3EFFCF2C6257F9008E2945 /* ComponentPoint.swift in Sources */,
 				3F3EFFC82C62578D008E2945 /* BookRoomView.swift in Sources */,
 				3F3EFFBD2C625701008E2945 /* TabOptions.swift in Sources */,
+				14FBF6152C6B7D9B0027A065 /* ReserveRoomCard.swift in Sources */,
+				14FBF6192C6B90730027A065 /* ReserveRoomDay.swift in Sources */,
 				148336302C6A254800E5B6EF /* Extension+ShiftWork.swift in Sources */,
+				14FBF61B2C6B92160027A065 /* ReserveRoomView.swift in Sources */,
+				14FBF6172C6B7F050027A065 /* Reservation.swift in Sources */,
 				3F3EFFCB2C6257DB008E2945 /* ComponentBookRoom.swift in Sources */,
 				14D80B912C650FDB00CF9285 /* Layout.swift in Sources */,
 				3FF76E722C639FAC008838E6 /* ButtonLoginStyle.swift in Sources */,

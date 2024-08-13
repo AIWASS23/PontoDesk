@@ -24,7 +24,7 @@ struct PontoDeskApp: App {
             //                LoginView(screenSize: reader)
             //                    .background(.bgScreen)
             //            }
-            RoomReservationView()
+            ReserveRoomView()
                 .frame(minWidth: 1000, minHeight: 800)
         }
         .windowResizability(.contentMinSize)
