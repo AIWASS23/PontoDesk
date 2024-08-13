@@ -11,6 +11,7 @@ struct SideBar: View {
     @State private var currentTab: TabOptions = .point
     @State var showTabBar: Bool = true
     @State var showLegend: Bool = false
+    @AppStorage("userToken") var userToken = ""
 
     var body: some View {
         GeometryReader{reader in
