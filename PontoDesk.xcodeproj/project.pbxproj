@@ -19,6 +19,7 @@
 		14EB74812C5912A60006B201 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74802C5912A60006B201 /* FirebaseFirestore */; };
 		14EB749B2C5912A60006B201 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB749A2C5912A60006B201 /* FirebaseStorage */; };
 		212975C52C668EF800905CE5 /* ComponentsPointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212975C42C668EF800905CE5 /* ComponentsPointViewModel.swift */; };
+		213FFC1E2C6B8698003C2BD4 /* PointRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213FFC1D2C6B8698003C2BD4 /* PointRegister.swift */; };
 		3F3EFFB32C6245F4008E2945 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFB22C6245F4008E2945 /* SideBar.swift */; };
 		3F3EFFB92C6253C0008E2945 /* SideBarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFB82C6253C0008E2945 /* SideBarLayout.swift */; };
 		3F3EFFBB2C6253D9008E2945 /* SideBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFBA2C6253D9008E2945 /* SideBarManager.swift */; };
@@ -68,6 +69,7 @@
 		147ED43B2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoDeskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		14EB74A22C5919150006B201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		212975C42C668EF800905CE5 /* ComponentsPointViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentsPointViewModel.swift; sourceTree = "<group>"; };
+		213FFC1D2C6B8698003C2BD4 /* PointRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointRegister.swift; sourceTree = "<group>"; };
 		3F3EFFB22C6245F4008E2945 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		3F3EFFB82C6253C0008E2945 /* SideBarLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarLayout.swift; sourceTree = "<group>"; };
 		3F3EFFBA2C6253D9008E2945 /* SideBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarManager.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			children = (
 				3F3EFFC32C625761008E2945 /* Components */,
 				3F3EFFC12C62575C008E2945 /* PointView.swift */,
+				213FFC1D2C6B8698003C2BD4 /* PointRegister.swift */,
 			);
 			path = Point;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				3F3EFFD72C62895B008E2945 /* ButtonLogin.swift in Sources */,
 				3F3EFFCD2C6257EB008E2945 /* ComponentBookTable.swift in Sources */,
 				3F3EFFBB2C6253D9008E2945 /* SideBarManager.swift in Sources */,
+				213FFC1E2C6B8698003C2BD4 /* PointRegister.swift in Sources */,
 				3F3EFFD52C62884D008E2945 /* LoginView.swift in Sources */,
 				212975C52C668EF800905CE5 /* ComponentsPointViewModel.swift in Sources */,
 				147ED4202C57B7EE008D4C04 /* ContentView.swift in Sources */,
@@ -706,7 +710,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PontoDesk/Resources\"";
-				DEVELOPMENT_TEAM = D499HFTXDJ;
+				DEVELOPMENT_TEAM = 94QMJZ58ZW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -718,7 +722,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = YasminCarloto.PontoDesk;
+				PRODUCT_BUNDLE_IDENTIFIER = RicardoSilva.PontoDesk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -736,7 +740,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PontoDesk/Resources\"";
-				DEVELOPMENT_TEAM = D499HFTXDJ;
+				DEVELOPMENT_TEAM = 94QMJZ58ZW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -748,7 +752,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = YasminCarloto.PontoDesk;
+				PRODUCT_BUNDLE_IDENTIFIER = RicardoSilva.PontoDesk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -762,11 +766,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D499HFTXDJ;
+				DEVELOPMENT_TEAM = 94QMJZ58ZW;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MarceloDeAraujo.PontoDeskTests;
+				PRODUCT_BUNDLE_IDENTIFIER = RicardoSilva.PontoDeskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -781,11 +785,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D499HFTXDJ;
+				DEVELOPMENT_TEAM = 94QMJZ58ZW;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MarceloDeAraujo.PontoDeskTests;
+				PRODUCT_BUNDLE_IDENTIFIER = RicardoSilva.PontoDeskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -799,7 +803,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D499HFTXDJ;
+				DEVELOPMENT_TEAM = 94QMJZ58ZW;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MarceloDeAraujo.PontoDeskUITests;
@@ -816,7 +820,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D499HFTXDJ;
+				DEVELOPMENT_TEAM = 94QMJZ58ZW;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MarceloDeAraujo.PontoDeskUITests;

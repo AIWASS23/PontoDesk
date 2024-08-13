@@ -28,7 +28,7 @@ struct NavigationDateView: View {
             }
            .buttonStyle(PlainButtonStyle())
             
-            VStack (alignment: .center){
+            VStack {
                
                 Text(dayOfWeek.capitalized)
                     .font(.title)

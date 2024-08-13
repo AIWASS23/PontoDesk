@@ -24,7 +24,7 @@ class ComponentsPointViewModel: ObservableObject {
     @Published  var horaEntrada = ""
     @Published  var dataSaida = ""
     @Published  var horaSaida = ""
-    @Published  var stateButton: (bool1: Bool, bool2: Bool, bool3: Bool) = (false, true, true)
+    @Published  var stateButton: (btentrada: Bool, btsaída: Bool, bool3: Bool, stsaida:Bool) = (false, true, true, false)
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -92,7 +92,7 @@ class ComponentsPointViewModel: ObservableObject {
         let difference = Calendar.current.dateComponents([.hour, .minute], from: start, to: end)
         let hours = difference.hour ?? 0
         let minutes = difference.minute ?? 0
-        return "\(hours) horas e \(minutes) minutos"
+        return "\(hours) horas e \(minutes) minutos."
     }
     
 }
