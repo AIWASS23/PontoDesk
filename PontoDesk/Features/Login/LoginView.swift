@@ -9,13 +9,18 @@ import SwiftUI
 
 struct LoginView: View {
     var screenSize: GeometryProxy
+    @Environment (\.openWindow) var openWindow
+    @Binding var currentUrl: URL
     
+    private let urlGoogle = GoogleURL(client_id: "xxxx", redirect_uri: "xxxx")
+    private let urlGitHub = GitHubURL(client_id: "Ov23liGARcYKfhDcZ4yo", redirect_uri: "https://ncvvjec7c7.execute-api.us-east-2.amazonaws.com/Prod/auth/github")
+        
     var body: some View {
         HStack(alignment: .center){
-           Image("login-image")
+            Image("login-image")
                 .resizable()
                 .scaledToFit()
-                        
+            
             VStack(alignment: .center){
                 VStack(alignment: .center){
                     Image("logo-pontodesk")
@@ -29,10 +34,22 @@ struct LoginView: View {
                     
                     VStack(alignment: .center){
                         ButtonLogin(buttonImage: "google-logo", buttonText: "Login com Google", parentContainerSize: screenSize){
-                            print("Eu funciona como botão de login do Google")
+                            if let url = urlGoogle.url {
+                                currentUrl = url
+                                openWindow(id: "auth")
+                                print("Eu funciono como botão de login do Google")
+                            }else{
+                                print("Can not open passed URL")
+                            }
                         }
+                        
                         ButtonLogin(buttonImage: "github-logo", buttonText: "Login com Github", parentContainerSize: screenSize){
-                            print("Eu funciono como botão de login do Github")
+                            if let url = urlGitHub.url {
+                                currentUrl = url
+                                openWindow(id: "auth")
+                            }else{
+                                print("Can not open passed URL")
+                            }
                         }
                     }
                 }

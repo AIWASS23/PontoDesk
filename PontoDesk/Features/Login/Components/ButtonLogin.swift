@@ -12,6 +12,7 @@ struct ButtonLogin: View {
     var buttonImage: String
     var buttonText: String
     var parentContainerSize: GeometryProxy
+    @State var buttonClicked: Bool =  false
     
     init(buttonImage: String, buttonText: String, parentContainerSize: GeometryProxy, buttonAction: @escaping () -> Void) {
         self.buttonImage = buttonImage
@@ -23,6 +24,7 @@ struct ButtonLogin: View {
     var body: some View {
         Button(action: {
             buttonAction()
+            buttonClicked.toggle()
         }, label: {
             HStack(alignment: .center){
                 Image(buttonImage)
