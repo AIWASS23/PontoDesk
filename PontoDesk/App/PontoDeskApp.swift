@@ -35,7 +35,6 @@ struct PontoDeskApp: App {
                 if let component =  URLComponents(url: url, resolvingAgainstBaseURL: true){
                     guard let token = component.queryItems?[0].value else { return }
                     loginViewModel.setToken(token: token)
-                    loginViewModel.setName()
                 }
             })
             .handlesExternalEvents(preferring: ["pontodesk"], allowing: ["pontodesk"])
