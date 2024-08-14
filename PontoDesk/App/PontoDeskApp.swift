@@ -24,6 +24,7 @@ struct PontoDeskApp: App {
     var body: some Scene {
         Window("PontoDesk", id: "mainWindow"){
             GeometryReader{reader in
+                           
                 if userToken.isEmpty{
                     LoginView(screenSize: reader, currentUrl: $currentUrl)
                         .background(.bgScreen)
