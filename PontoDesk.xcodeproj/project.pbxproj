@@ -28,6 +28,8 @@
 		14FBF6172C6B7F050027A065 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FBF6162C6B7F050027A065 /* Reservation.swift */; };
 		14FBF6192C6B90730027A065 /* ReserveRoomDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FBF6182C6B90730027A065 /* ReserveRoomDay.swift */; };
 		14FBF61B2C6B92160027A065 /* ReserveRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FBF61A2C6B92160027A065 /* ReserveRoomView.swift */; };
+		212975C52C668EF800905CE5 /* ComponentsPointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212975C42C668EF800905CE5 /* ComponentsPointViewModel.swift */; };
+		213FFC1E2C6B8698003C2BD4 /* PointRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213FFC1D2C6B8698003C2BD4 /* PointRegister.swift */; };
 		3F3EFFB32C6245F4008E2945 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFB22C6245F4008E2945 /* SideBar.swift */; };
 		3F3EFFB92C6253C0008E2945 /* SideBarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFB82C6253C0008E2945 /* SideBarLayout.swift */; };
 		3F3EFFBB2C6253D9008E2945 /* SideBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFBA2C6253D9008E2945 /* SideBarManager.swift */; };
@@ -37,10 +39,16 @@
 		3F3EFFC82C62578D008E2945 /* BookRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFC72C62578D008E2945 /* BookRoomView.swift */; };
 		3F3EFFCB2C6257DB008E2945 /* ComponentBookRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFCA2C6257DB008E2945 /* ComponentBookRoom.swift */; };
 		3F3EFFCD2C6257EB008E2945 /* ComponentBookTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFCC2C6257EB008E2945 /* ComponentBookTable.swift */; };
-		3F3EFFCF2C6257F9008E2945 /* ComponentPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFCE2C6257F9008E2945 /* ComponentPoint.swift */; };
+		3F3EFFCF2C6257F9008E2945 /* NavigationDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFCE2C6257F9008E2945 /* NavigationDateView.swift */; };
 		3F3EFFD12C625F70008E2945 /* SideBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFD02C625F70008E2945 /* SideBarButton.swift */; };
 		3F3EFFD52C62884D008E2945 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFD42C62884D008E2945 /* LoginView.swift */; };
 		3F3EFFD72C62895B008E2945 /* ButtonLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFD62C62895B008E2945 /* ButtonLogin.swift */; };
+		3F560BE72C6B9CFF002B0846 /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = 3F560BE62C6B9CFF002B0846 /* JWTDecode */; };
+		3F8151422C66322300FC5072 /* GitHubURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8151412C66322300FC5072 /* GitHubURL.swift */; };
+		3F8151442C66323E00FC5072 /* GoogleURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8151432C66323E00FC5072 /* GoogleURL.swift */; };
+		3F8151462C66413400FC5072 /* LoginPlataformProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8151452C66413400FC5072 /* LoginPlataformProtocol.swift */; };
+		3FDC90E62C64F4C1003889AB /* LoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC90E52C64F4C1003889AB /* LoginWebView.swift */; };
+		3FE20C4E2C6B882800D77386 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE20C4D2C6B882800D77386 /* LoginViewModel.swift */; };
 		3FF76E722C639FAC008838E6 /* ButtonLoginStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF76E712C639FAC008838E6 /* ButtonLoginStyle.swift */; };
 		B83380912C5D2B72006AA587 /* TemplateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83380902C5D2B72006AA587 /* TemplateComponent.swift */; };
 /* End PBXBuildFile section */
@@ -86,6 +94,8 @@
 		14FBF6162C6B7F050027A065 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		14FBF6182C6B90730027A065 /* ReserveRoomDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveRoomDay.swift; sourceTree = "<group>"; };
 		14FBF61A2C6B92160027A065 /* ReserveRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveRoomView.swift; sourceTree = "<group>"; };
+		212975C42C668EF800905CE5 /* ComponentsPointViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentsPointViewModel.swift; sourceTree = "<group>"; };
+		213FFC1D2C6B8698003C2BD4 /* PointRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointRegister.swift; sourceTree = "<group>"; };
 		3F3EFFB22C6245F4008E2945 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		3F3EFFB82C6253C0008E2945 /* SideBarLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarLayout.swift; sourceTree = "<group>"; };
 		3F3EFFBA2C6253D9008E2945 /* SideBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarManager.swift; sourceTree = "<group>"; };
@@ -95,15 +105,19 @@
 		3F3EFFC72C62578D008E2945 /* BookRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRoomView.swift; sourceTree = "<group>"; };
 		3F3EFFCA2C6257DB008E2945 /* ComponentBookRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBookRoom.swift; sourceTree = "<group>"; };
 		3F3EFFCC2C6257EB008E2945 /* ComponentBookTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBookTable.swift; sourceTree = "<group>"; };
-		3F3EFFCE2C6257F9008E2945 /* ComponentPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentPoint.swift; sourceTree = "<group>"; };
+		3F3EFFCE2C6257F9008E2945 /* NavigationDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDateView.swift; sourceTree = "<group>"; };
 		3F3EFFD02C625F70008E2945 /* SideBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarButton.swift; sourceTree = "<group>"; };
 		3F3EFFD42C62884D008E2945 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3F3EFFD62C62895B008E2945 /* ButtonLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLogin.swift; sourceTree = "<group>"; };
+		3F8151412C66322300FC5072 /* GitHubURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubURL.swift; sourceTree = "<group>"; };
+		3F8151432C66323E00FC5072 /* GoogleURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleURL.swift; sourceTree = "<group>"; };
+		3F8151452C66413400FC5072 /* LoginPlataformProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPlataformProtocol.swift; sourceTree = "<group>"; };
+		3FDC90E52C64F4C1003889AB /* LoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWebView.swift; sourceTree = "<group>"; };
+		3FE20C4D2C6B882800D77386 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		3FF76E712C639FAC008838E6 /* ButtonLoginStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLoginStyle.swift; sourceTree = "<group>"; };
 		B83380902C5D2B72006AA587 /* TemplateComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateComponent.swift; sourceTree = "<group>"; };
 		B83380982C5D2DB7006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B833809C2C5D2E14006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
-		B83380A02C5D2E3B006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B83380A72C5D2E74006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +128,7 @@
 			files = (
 				14EB74812C5912A60006B201 /* FirebaseFirestore in Frameworks */,
 				14EB74752C5912A60006B201 /* FirebaseAuth in Frameworks */,
+				3F560BE72C6B9CFF002B0846 /* JWTDecode in Frameworks */,
 				14EB749B2C5912A60006B201 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +254,7 @@
 			children = (
 				3F3EFFC32C625761008E2945 /* Components */,
 				3F3EFFC12C62575C008E2945 /* PointView.swift */,
+				213FFC1D2C6B8698003C2BD4 /* PointRegister.swift */,
 			);
 			path = Point;
 			sourceTree = "<group>";
@@ -264,7 +280,8 @@
 		3F3EFFC32C625761008E2945 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				3F3EFFCE2C6257F9008E2945 /* ComponentPoint.swift */,
+				3F3EFFCE2C6257F9008E2945 /* NavigationDateView.swift */,
+				212975C42C668EF800905CE5 /* ComponentsPointViewModel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -290,6 +307,7 @@
 			children = (
 				3F3EFFD32C62880B008E2945 /* Components */,
 				3F3EFFD42C62884D008E2945 /* LoginView.swift */,
+				3FE20C4D2C6B882800D77386 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -298,6 +316,22 @@
 			isa = PBXGroup;
 			children = (
 				3F3EFFD62C62895B008E2945 /* ButtonLogin.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3FDC90E42C64F4AA003889AB /* LoginWebView */ = {
+			isa = PBXGroup;
+			children = (
+				3FDC90E72C64F4D2003889AB /* Components */,
+				3FDC90E52C64F4C1003889AB /* LoginWebView.swift */,
+			);
+			path = LoginWebView;
+			sourceTree = "<group>";
+		};
+		3FDC90E72C64F4D2003889AB /* Components */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -314,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				14D80B8D2C64EE8400CF9285 /* ReserveRoom */,
+				3FDC90E42C64F4AA003889AB /* LoginWebView */,
 				3F3EFFD22C628803008E2945 /* Login */,
 				3F3EFFC02C62574B008E2945 /* BookRoom */,
 				3F3EFFBF2C625741008E2945 /* BookTable */,
@@ -385,6 +420,8 @@
 			isa = PBXGroup;
 			children = (
 				14FBF6162C6B7F050027A065 /* Reservation.swift */,
+				3F8151412C66322300FC5072 /* GitHubURL.swift */,
+				3F8151432C66323E00FC5072 /* GoogleURL.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -400,7 +437,7 @@
 		B83380942C5D2CFA006AA587 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				B83380A02C5D2E3B006AA587 /* .placeholder */,
+				3F8151452C66413400FC5072 /* LoginPlataformProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -451,6 +488,7 @@
 				14EB74742C5912A60006B201 /* FirebaseAuth */,
 				14EB74802C5912A60006B201 /* FirebaseFirestore */,
 				14EB749A2C5912A60006B201 /* FirebaseStorage */,
+				3F560BE62C6B9CFF002B0846 /* JWTDecode */,
 			);
 			productName = PontoDesk;
 			productReference = 147ED41A2C57B7EE008D4C04 /* PontoDesk.app */;
@@ -526,6 +564,7 @@
 			mainGroup = 147ED4112C57B7EE008D4C04;
 			packageReferences = (
 				14EB74652C5910480006B201 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3F560BE52C6B9CFF002B0846 /* XCRemoteSwiftPackageReference "JWTDecode.swift" */,
 			);
 			productRefGroup = 147ED41B2C57B7EE008D4C04 /* Products */;
 			projectDirPath = "";
@@ -571,16 +610,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F3EFFC22C62575C008E2945 /* PointView.swift in Sources */,
+				3FDC90E62C64F4C1003889AB /* LoginWebView.swift in Sources */,
+				3FE20C4E2C6B882800D77386 /* LoginViewModel.swift in Sources */,
 				3F3EFFD72C62895B008E2945 /* ButtonLogin.swift in Sources */,
 				3F3EFFCD2C6257EB008E2945 /* ComponentBookTable.swift in Sources */,
 				14D80B932C66447100CF9285 /* ShiftWork.swift in Sources */,
 				3F3EFFBB2C6253D9008E2945 /* SideBarManager.swift in Sources */,
+				213FFC1E2C6B8698003C2BD4 /* PointRegister.swift in Sources */,
 				3F3EFFD52C62884D008E2945 /* LoginView.swift in Sources */,
+				212975C52C668EF800905CE5 /* ComponentsPointViewModel.swift in Sources */,
 				147ED4202C57B7EE008D4C04 /* ContentView.swift in Sources */,
 				3F3EFFC52C625771008E2945 /* BookTableView.swift in Sources */,
 				B83380912C5D2B72006AA587 /* TemplateComponent.swift in Sources */,
 				3F3EFFD12C625F70008E2945 /* SideBarButton.swift in Sources */,
-				3F3EFFCF2C6257F9008E2945 /* ComponentPoint.swift in Sources */,
+				3F3EFFCF2C6257F9008E2945 /* NavigationDateView.swift in Sources */,
 				3F3EFFC82C62578D008E2945 /* BookRoomView.swift in Sources */,
 				3F3EFFBD2C625701008E2945 /* TabOptions.swift in Sources */,
 				1487A9522C6CEB38009F582D /* ReserveRoomDayViewModel.swift in Sources */,
@@ -593,9 +636,12 @@
 				14D80B912C650FDB00CF9285 /* Layout.swift in Sources */,
 				3FF76E722C639FAC008838E6 /* ButtonLoginStyle.swift in Sources */,
 				14D80B8F2C64EF3F00CF9285 /* ReserveRoomTime.swift in Sources */,
+				3F8151422C66322300FC5072 /* GitHubURL.swift in Sources */,
 				3F3EFFB92C6253C0008E2945 /* SideBarLayout.swift in Sources */,
 				1487A94F2C6CD767009F582D /* ReserveRoomTimeViewModel.swift in Sources */,
 				3F3EFFB32C6245F4008E2945 /* SideBar.swift in Sources */,
+				3F8151442C66323E00FC5072 /* GoogleURL.swift in Sources */,
+				3F8151462C66413400FC5072 /* LoginPlataformProtocol.swift in Sources */,
 				147ED41E2C57B7EE008D4C04 /* PontoDeskApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -822,7 +868,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MarceloDeAraujo.PontoDeskTests;
+				PRODUCT_BUNDLE_IDENTIFIER = RicardoSilva.PontoDeskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -841,7 +887,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MarceloDeAraujo.PontoDeskTests;
+				PRODUCT_BUNDLE_IDENTIFIER = RicardoSilva.PontoDeskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -933,6 +979,14 @@
 				minimumVersion = 10.29.0;
 			};
 		};
+		3F560BE52C6B9CFF002B0846 /* XCRemoteSwiftPackageReference "JWTDecode.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/JWTDecode.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -950,6 +1004,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 14EB74652C5910480006B201 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		3F560BE62C6B9CFF002B0846 /* JWTDecode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F560BE52C6B9CFF002B0846 /* XCRemoteSwiftPackageReference "JWTDecode.swift" */;
+			productName = JWTDecode;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

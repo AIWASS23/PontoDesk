@@ -11,6 +11,8 @@ struct SideBarLayout: View {
     @Binding var currentTab: TabOptions
     var size: CGSize
     @State private var showLegend = false
+    @AppStorage("userToken") var userToken = ""
+    var loginViewModel = LoginViewModel()
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -31,7 +33,7 @@ struct SideBarLayout: View {
             Spacer()
             
             SideBarButton(buttonAction: {
-                print("Eu funciono pra sair da aplicação")
+                loginViewModel.emptyToken()
             }, showLegend: $showLegend, tabName: "Logout", tabIcon: "logout-icon", currentTab: $currentTab)
             
             Spacer()
