@@ -12,7 +12,12 @@ struct LoginWebView: NSViewRepresentable {
     var url: URL
     
     func makeNSView(context: Context) -> WKWebView {
-        let wb = WKWebView()
+        let webConfiguration = WKWebViewConfiguration()
+        webConfiguration.websiteDataStore = WKWebsiteDataStore.nonPersistent()
+        let contentController = WKUserContentController()
+        webConfiguration.userContentController = contentController
+        let wb = WKWebView(frame: .zero, configuration: webConfiguration)
+        
         let requestURL = URLRequest(url: url)
         wb.load(requestURL)
         
