@@ -24,7 +24,7 @@ struct PontoDeskApp: App {
     var body: some Scene {
         Window("PontoDesk", id: "mainWindow"){
             GeometryReader{reader in
-                           
+
                 if userToken.isEmpty{
                     LoginView(screenSize: reader, currentUrl: $currentUrl)
                         .background(.bgScreen)
@@ -36,7 +36,6 @@ struct PontoDeskApp: App {
                 if let component =  URLComponents(url: url, resolvingAgainstBaseURL: true){
                     guard let token = component.queryItems?[0].value else { return }
                     loginViewModel.setToken(token: token)
-                    loginViewModel.setName()
                 }
             })
             .handlesExternalEvents(preferring: ["pontodesk"], allowing: ["pontodesk"])

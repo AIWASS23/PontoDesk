@@ -11,10 +11,13 @@ import JWTDecode
 
 struct LoginViewModel{
     @AppStorage("userToken") var userToken = ""
+    @AppStorage("userId") var userId = ""
     @AppStorage("userName") var userName = ""
+    @AppStorage("userEmail") var userEmail = ""
 
     func setToken(token: String){
         self.userToken = token
+        self.setUserInfo()
     }
     
     func emptyToken(){
@@ -31,11 +34,16 @@ struct LoginViewModel{
         }
     }
     
-    func setName(){
+    private func setUserInfo(){
         let decodedJWT = decodeToken(token: userToken)
         if let name = decodedJWT?.claim(name: "name").string {
             self.userName = name
-            print(name)
+        }
+        if let email = decodedJWT?.claim(name: "email").string {
+            self.userEmail = email
+        }
+        if let id = decodedJWT?.claim(name: "sub").string {
+            self.userId = id
         }
     }
 }
