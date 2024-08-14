@@ -21,9 +21,11 @@ struct ReserveRoomCard: View {
             }
             .padding([.leading, .trailing])
         }
+        .frame(minWidth: 268, minHeight: 104)
         .background(Color("bg-dark-blue"))
         .preferredColorScheme(.dark)
         .cornerRadius(10)
+
     }
     
     func formatTime(_ date: Date) -> String {

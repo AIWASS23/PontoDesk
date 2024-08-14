@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NavigationDateView: View {
+struct ReserveRoomDay: View {
     
     @Binding var date: Date
     var dayOfWeek: String
@@ -28,7 +28,7 @@ struct NavigationDateView: View {
             }
            .buttonStyle(PlainButtonStyle())
             
-            VStack (alignment: .center){
+            VStack {
                
                 Text(dayOfWeek.capitalized)
                     .font(.title)
@@ -59,22 +59,5 @@ struct NavigationDateView: View {
         }
         .frame(minWidth: 365, minHeight: 56)
         .padding()
-    }
-}
-
-struct NavigationDateView_Previews: PreviewProvider {
-    @State static var mockDate = Date()
-
-    static var previews: some View {
-        NavigationDateView(
-            date: $mockDate,
-            dayOfWeek: "Tuesday",
-            formattedDate: "13 August 2024",
-            onPreviousDate: { print("Previous date action") },
-            onNextDate: { print("Next date action") },
-            isAdvanceButtonEnabled: true
-        )
-        .background(Color.gray.opacity(0.2))
-        .previewLayout(.sizeThatFits)
     }
 }
