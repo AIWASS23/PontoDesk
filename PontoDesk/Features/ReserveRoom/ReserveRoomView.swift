@@ -32,7 +32,12 @@ struct ReserveRoomView: View {
             )
             .frame(maxWidth: .infinity)
             .padding(.bottom, 20)
-            .background(Color.gray.opacity(0.2))
+            
+            Text("Reservas do Dia")
+                .font(.system(size: 50))
+                .padding(.leading)
+                .hLeading()
+                .foregroundStyle(.bgDarkBlue)
             
             HStack {
                 ScrollView {
@@ -51,12 +56,16 @@ struct ReserveRoomView: View {
                 })
                 
                 ReserveRoomTime(viewModel: viewModel)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
                     .frame(width: 400)
                     .padding()
+                    .hTrailing()
             }
             .padding()
         }
+        .background(Color("bg-screen"))
     }
+        
     
     var filteredReservations: [Reservation] {
         reservations.filter { reservation in

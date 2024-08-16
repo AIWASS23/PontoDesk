@@ -21,7 +21,7 @@ struct ReserveRoomCard: View {
             }
             .padding([.leading, .trailing])
         }
-        .frame(minWidth: 268, minHeight: 104)
+        .frame(minWidth: 468, minHeight: 124)
         .background(Color("bg-dark-blue"))
         .preferredColorScheme(.dark)
         .cornerRadius(10)
