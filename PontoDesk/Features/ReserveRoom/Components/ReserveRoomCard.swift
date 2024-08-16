@@ -11,17 +11,16 @@ struct ReserveRoomCard: View {
     let reservation: Reservation
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading) {
             Text("\(reservation.name)")
-                .font(.headline)
-                .padding([.leading, .trailing])
+                .font(.largeTitle)
             HStack {
                 Image(systemName: "clock")
                 Text("De \(formatTime(reservation.entryTime)) às \(formatTime(reservation.exitTime))")
+                    .font(.title)
             }
-            .padding([.leading, .trailing])
         }
-        .frame(minWidth: 468, minHeight: 124)
+        .frame(minWidth: 368, minHeight: 124)
         .background(Color("bg-dark-blue"))
         .preferredColorScheme(.dark)
         .cornerRadius(10)

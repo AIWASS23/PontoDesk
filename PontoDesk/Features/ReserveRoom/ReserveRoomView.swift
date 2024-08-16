@@ -34,12 +34,12 @@ struct ReserveRoomView: View {
             .padding(.bottom, 20)
             
             Text("Reservas do Dia")
-                .font(.system(size: 50))
+                .font(.system(size: 60))
                 .padding(.leading)
                 .hLeading()
                 .foregroundStyle(.bgDarkBlue)
             
-            HStack {
+            HStack(alignment: .top) {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 10) {
                         ForEach(filteredReservations) { reservation in
