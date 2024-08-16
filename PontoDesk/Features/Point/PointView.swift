@@ -11,7 +11,7 @@ struct PointView: View {
     @StateObject private var viewModel = ComponentsPointViewModel()
     
     var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-   
+    
     var body: some View {
         VStack {
             NavigationDateView(
@@ -37,30 +37,31 @@ struct PointView: View {
                 isAdvanceButtonEnabled: !viewModel.stateButton.bool3
             )
             
-                       
+            
             VStack (alignment: .leading){
                 //Registro de Ponto
-        PointRegister()
-          
-            }
-            
-            .frame(width: 600, alignment: .leading)
-                        .padding([.leading, .trailing], 16)
-          
-            Spacer()
-            .onAppear {
-                viewModel.updateDateInfo()
-                viewModel.checkAdvanceButtonState()
-            }
-            
-            .onReceive(timer) { _ in
-                viewModel.updateTimeOnly()
+                PointRegister()
                 
             }
             
+            .frame(width: 600, alignment: .leading)
+            .padding([.leading, .trailing], 16)
+            
+            Spacer()
+                .onAppear {
+                    viewModel.updateDateInfo()
+                    viewModel.checkAdvanceButtonState()
+                }
+            
+                .onReceive(timer) { _ in
+                    viewModel.updateTimeOnly()
+                    
+                }
+            
         }.background(.bgScreen)
         
-    }
+    } 
+    
 }
 #Preview {
     PointView()
