@@ -14,7 +14,8 @@ struct ReserveRoomDay: View {
     var formattedDate: String
     var onPreviousDate: () -> Void
     var onNextDate: () -> Void
-    var isAdvanceButtonEnabled: Bool
+    var isPreviousButtonEnabled: Bool
+    
     var body: some View {
         
         HStack( alignment: .center)  {
@@ -24,9 +25,10 @@ struct ReserveRoomDay: View {
                 Image(systemName: "chevron.left")
                     .font(.system(size: 38, weight: .bold))
                     .padding()
-                    .foregroundColor(.bgDarkBlue)
+                    .foregroundColor(isPreviousButtonEnabled ? Color.bgDarkBlue : Color.gray)
             }
-           .buttonStyle(PlainButtonStyle())
+            .buttonStyle(PlainButtonStyle())
+            .disabled(!isPreviousButtonEnabled)
             
             VStack {
                
@@ -51,11 +53,10 @@ struct ReserveRoomDay: View {
                 Image(systemName: "chevron.right")
                     .padding()
                     .font(.system(size: 38, weight: .bold))
-                    .foregroundColor(isAdvanceButtonEnabled ? Color.bgDarkBlue : Color.gray)
+                    .foregroundColor(Color.bgDarkBlue)
                 
             }
                 .buttonStyle(PlainButtonStyle())
-                .disabled(!isAdvanceButtonEnabled)
         }
         .frame(minWidth: 365, minHeight: 56)
         .padding()

@@ -10,19 +10,25 @@
 import SwiftUI
 
 struct ReserveRoomView: View {
+    
     @State private var date = Date()
     @State private var reservations: [Reservation] = []
+    @ObservedObject var dayViewModel = ReserveRoomDayViewModel()
+    
     
     var body: some View {
         VStack {
-            // Calendar at the top center
             ReserveRoomDay(
-                date: $date,
-                dayOfWeek: "Tuesday",
-                formattedDate: "13 August 2024",
-                onPreviousDate: { /* Handle previous date */ },
-                onNextDate: { /* Handle next date */ },
-                isAdvanceButtonEnabled: true
+                date: $dayViewModel.date,
+                dayOfWeek: dayViewModel.dayOfWeek,
+                formattedDate: dayViewModel.formattedDate,
+                onPreviousDate: {
+                    dayViewModel.date = Calendar.current.date(byAdding: .day, value: -1, to: dayViewModel.date) ?? dayViewModel.date
+                },
+                onNextDate: {
+                    dayViewModel.date = Calendar.current.date(byAdding: .day, value: 1, to: dayViewModel.date) ?? dayViewModel.date
+                },
+                isPreviousButtonEnabled: dayViewModel.isPreviousButtonEnabled
             )
             .frame(maxWidth: .infinity)
             .padding(.bottom, 20)
@@ -31,7 +37,7 @@ struct ReserveRoomView: View {
             HStack {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 10) {
-                        ForEach(reservations) { reservation in
+                        ForEach(filteredReservations) { reservation in
                             ReserveRoomCard(reservation: reservation)
                         }
                         Spacer()
@@ -51,5 +57,10 @@ struct ReserveRoomView: View {
             .padding()
         }
     }
+    
+    var filteredReservations: [Reservation] {
+        reservations.filter { reservation in
+            Calendar.current.isDate(reservation.entryTime, inSameDayAs: dayViewModel.date)
+        }
+    }
 }
-
