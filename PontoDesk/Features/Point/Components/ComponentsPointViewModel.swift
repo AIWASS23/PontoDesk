@@ -26,6 +26,9 @@ class ComponentsPointViewModel: ObservableObject {
     @Published  var horaSaida = ""
     @Published  var stateButton: (btentrada: Bool, btsaída: Bool, bool3: Bool, stsaida:Bool) = (false, true, true, false)
     
+    @AppStorage("userToken") var token = ""
+    @AppStorage("userId") var userId = ""
+    
     private var cancellables = Set<AnyCancellable>()
     
     init() {
@@ -95,5 +98,14 @@ class ComponentsPointViewModel: ObservableObject {
         return "\(hours) horas e \(minutes) minutos."
     }
     
+    func clockIn() async -> Bool{
+        let api = pdAPI(token: token)
+        return await api.doClockIn(userID: userId)
+    }
+    
+    func clockOut() async -> Bool{
+        let api = pdAPI(token: token)
+        return await api.doClockOut(userID: userId)
+    }
 }
 

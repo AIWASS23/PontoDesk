@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+enum HttpMethods: String{
+    
+    case GET
+    case POST
+    case UPDATE
+    case PUT
+    
+    
+}

@@ -40,6 +40,11 @@ struct PointRegister: View {
                 //Botão de Entrada
                 HStack (alignment: .center){
                     Button(action: {
+                        DispatchQueue.main.async {
+                            Task{
+                                 print( await viewmodel.clockIn())
+                            }
+                        }
                         viewmodel.dataInicial = Date()
                         guard let dataInicial = viewmodel.dataInicial else { return }
                         viewmodel.dataEntrada = String(" \(viewmodel.formatDatePonto(date: dataInicial))")
@@ -99,6 +104,11 @@ struct PointRegister: View {
                 HStack{
                     
                     Button(action: {
+                        DispatchQueue.main.async {
+                            Task{
+                                 print( await viewmodel.clockOut())
+                            }
+                        }
                         viewmodel.dataFinal = Date()
                         guard let dataFinal = viewmodel.dataFinal else { return }
                         viewmodel.dataSaida = String("\(viewmodel.formatDatePonto(date: dataFinal))")
