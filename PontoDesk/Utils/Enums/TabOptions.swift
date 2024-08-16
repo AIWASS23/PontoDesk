@@ -32,7 +32,7 @@ enum TabOptions: String, CaseIterable{
         case .bookTable:
             BookTableView()
         case .bookRoom:
-            BookRoomView()
+            ReserveRoomView()
         }
     }
 }
