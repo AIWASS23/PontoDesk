@@ -15,9 +15,19 @@
 		147ED4302C57B7F0008D4C04 /* PontoDeskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147ED42F2C57B7F0008D4C04 /* PontoDeskTests.swift */; };
 		147ED43A2C57B7F0008D4C04 /* PontoDeskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147ED4392C57B7F0008D4C04 /* PontoDeskUITests.swift */; };
 		147ED43C2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147ED43B2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift */; };
+		148336302C6A254800E5B6EF /* Extension+ShiftWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483362F2C6A254800E5B6EF /* Extension+ShiftWork.swift */; };
+		1487A94F2C6CD767009F582D /* ReserveRoomTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487A94E2C6CD767009F582D /* ReserveRoomTimeViewModel.swift */; };
+		1487A9522C6CEB38009F582D /* ReserveRoomDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487A9512C6CEB38009F582D /* ReserveRoomDayViewModel.swift */; };
+		14D80B8F2C64EF3F00CF9285 /* ReserveRoomTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D80B8E2C64EF3F00CF9285 /* ReserveRoomTime.swift */; };
+		14D80B912C650FDB00CF9285 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D80B902C650FDB00CF9285 /* Layout.swift */; };
+		14D80B932C66447100CF9285 /* ShiftWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D80B922C66447100CF9285 /* ShiftWork.swift */; };
 		14EB74752C5912A60006B201 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74742C5912A60006B201 /* FirebaseAuth */; };
 		14EB74812C5912A60006B201 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB74802C5912A60006B201 /* FirebaseFirestore */; };
 		14EB749B2C5912A60006B201 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 14EB749A2C5912A60006B201 /* FirebaseStorage */; };
+		14FBF6152C6B7D9B0027A065 /* ReserveRoomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FBF6142C6B7D9B0027A065 /* ReserveRoomCard.swift */; };
+		14FBF6172C6B7F050027A065 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FBF6162C6B7F050027A065 /* Reservation.swift */; };
+		14FBF6192C6B90730027A065 /* ReserveRoomDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FBF6182C6B90730027A065 /* ReserveRoomDay.swift */; };
+		14FBF61B2C6B92160027A065 /* ReserveRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FBF61A2C6B92160027A065 /* ReserveRoomView.swift */; };
 		212975C52C668EF800905CE5 /* ComponentsPointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212975C42C668EF800905CE5 /* ComponentsPointViewModel.swift */; };
 		213FFC1E2C6B8698003C2BD4 /* PointRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213FFC1D2C6B8698003C2BD4 /* PointRegister.swift */; };
 		3F3EFFB32C6245F4008E2945 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EFFB22C6245F4008E2945 /* SideBar.swift */; };
@@ -73,7 +83,17 @@
 		147ED4352C57B7F0008D4C04 /* PontoDeskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PontoDeskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		147ED4392C57B7F0008D4C04 /* PontoDeskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoDeskUITests.swift; sourceTree = "<group>"; };
 		147ED43B2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoDeskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1483362F2C6A254800E5B6EF /* Extension+ShiftWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+ShiftWork.swift"; sourceTree = "<group>"; };
+		1487A94E2C6CD767009F582D /* ReserveRoomTimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveRoomTimeViewModel.swift; sourceTree = "<group>"; };
+		1487A9512C6CEB38009F582D /* ReserveRoomDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveRoomDayViewModel.swift; sourceTree = "<group>"; };
+		14D80B8E2C64EF3F00CF9285 /* ReserveRoomTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveRoomTime.swift; sourceTree = "<group>"; };
+		14D80B902C650FDB00CF9285 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		14D80B922C66447100CF9285 /* ShiftWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftWork.swift; sourceTree = "<group>"; };
 		14EB74A22C5919150006B201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14FBF6142C6B7D9B0027A065 /* ReserveRoomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveRoomCard.swift; sourceTree = "<group>"; };
+		14FBF6162C6B7F050027A065 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		14FBF6182C6B90730027A065 /* ReserveRoomDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveRoomDay.swift; sourceTree = "<group>"; };
+		14FBF61A2C6B92160027A065 /* ReserveRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveRoomView.swift; sourceTree = "<group>"; };
 		212975C42C668EF800905CE5 /* ComponentsPointViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentsPointViewModel.swift; sourceTree = "<group>"; };
 		213FFC1D2C6B8698003C2BD4 /* PointRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointRegister.swift; sourceTree = "<group>"; };
 		3F3EFFB22C6245F4008E2945 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
@@ -179,6 +199,35 @@
 				147ED43B2C57B7F0008D4C04 /* PontoDeskUITestsLaunchTests.swift */,
 			);
 			path = PontoDeskUITests;
+			sourceTree = "<group>";
+		};
+		1487A94D2C6CD6D9009F582D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1487A94E2C6CD767009F582D /* ReserveRoomTimeViewModel.swift */,
+				1487A9512C6CEB38009F582D /* ReserveRoomDayViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1487A9502C6CD9ED009F582D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				14D80B8E2C64EF3F00CF9285 /* ReserveRoomTime.swift */,
+				14FBF6142C6B7D9B0027A065 /* ReserveRoomCard.swift */,
+				14FBF6182C6B90730027A065 /* ReserveRoomDay.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		14D80B8D2C64EE8400CF9285 /* ReserveRoom */ = {
+			isa = PBXGroup;
+			children = (
+				1487A94D2C6CD6D9009F582D /* ViewModels */,
+				1487A9502C6CD9ED009F582D /* Components */,
+				14FBF61A2C6B92160027A065 /* ReserveRoomView.swift */,
+			);
+			path = ReserveRoom;
 			sourceTree = "<group>";
 		};
 		3F3EFFB02C623C60008E2945 /* SideBar */ = {
@@ -298,6 +347,7 @@
 		B83380882C5D28F6006AA587 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				14D80B8D2C64EE8400CF9285 /* ReserveRoom */,
 				3FDC90E42C64F4AA003889AB /* LoginWebView */,
 				3F3EFFD22C628803008E2945 /* Login */,
 				3F3EFFC02C62574B008E2945 /* BookRoom */,
@@ -369,6 +419,7 @@
 		B83380922C5D2CEB006AA587 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
+				14FBF6162C6B7F050027A065 /* Reservation.swift */,
 				3F8151412C66322300FC5072 /* GitHubURL.swift */,
 				3F8151432C66323E00FC5072 /* GoogleURL.swift */,
 			);
@@ -394,6 +445,8 @@
 		B83380952C5D2D02006AA587 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				14D80B902C650FDB00CF9285 /* Layout.swift */,
+				1483362F2C6A254800E5B6EF /* Extension+ShiftWork.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -410,6 +463,7 @@
 			isa = PBXGroup;
 			children = (
 				3F3EFFBC2C625701008E2945 /* TabOptions.swift */,
+				14D80B922C66447100CF9285 /* ShiftWork.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -560,6 +614,7 @@
 				3FE20C4E2C6B882800D77386 /* LoginViewModel.swift in Sources */,
 				3F3EFFD72C62895B008E2945 /* ButtonLogin.swift in Sources */,
 				3F3EFFCD2C6257EB008E2945 /* ComponentBookTable.swift in Sources */,
+				14D80B932C66447100CF9285 /* ShiftWork.swift in Sources */,
 				3F3EFFBB2C6253D9008E2945 /* SideBarManager.swift in Sources */,
 				213FFC1E2C6B8698003C2BD4 /* PointRegister.swift in Sources */,
 				3F3EFFD52C62884D008E2945 /* LoginView.swift in Sources */,
@@ -571,10 +626,19 @@
 				3F3EFFCF2C6257F9008E2945 /* NavigationDateView.swift in Sources */,
 				3F3EFFC82C62578D008E2945 /* BookRoomView.swift in Sources */,
 				3F3EFFBD2C625701008E2945 /* TabOptions.swift in Sources */,
+				1487A9522C6CEB38009F582D /* ReserveRoomDayViewModel.swift in Sources */,
+				14FBF6152C6B7D9B0027A065 /* ReserveRoomCard.swift in Sources */,
+				14FBF6192C6B90730027A065 /* ReserveRoomDay.swift in Sources */,
+				148336302C6A254800E5B6EF /* Extension+ShiftWork.swift in Sources */,
+				14FBF61B2C6B92160027A065 /* ReserveRoomView.swift in Sources */,
+				14FBF6172C6B7F050027A065 /* Reservation.swift in Sources */,
 				3F3EFFCB2C6257DB008E2945 /* ComponentBookRoom.swift in Sources */,
+				14D80B912C650FDB00CF9285 /* Layout.swift in Sources */,
 				3FF76E722C639FAC008838E6 /* ButtonLoginStyle.swift in Sources */,
+				14D80B8F2C64EF3F00CF9285 /* ReserveRoomTime.swift in Sources */,
 				3F8151422C66322300FC5072 /* GitHubURL.swift in Sources */,
 				3F3EFFB92C6253C0008E2945 /* SideBarLayout.swift in Sources */,
+				1487A94F2C6CD767009F582D /* ReserveRoomTimeViewModel.swift in Sources */,
 				3F3EFFB32C6245F4008E2945 /* SideBar.swift in Sources */,
 				3F8151442C66323E00FC5072 /* GoogleURL.swift in Sources */,
 				3F8151462C66413400FC5072 /* LoginPlataformProtocol.swift in Sources */,
