@@ -44,6 +44,8 @@ struct PontoDeskApp: App {
             if userToken.isEmpty {
                 LoginWebView(url: self.currentUrl)
                 .frame(minWidth: 900, maxWidth: 900, minHeight: 450, maxHeight: 450)
+                PointView()
+                    .background(.bgScreen)
             }
         }
         .windowResizability(.contentSize)
