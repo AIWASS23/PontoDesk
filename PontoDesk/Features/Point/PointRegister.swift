@@ -9,12 +9,13 @@ import SwiftUI
 
 struct PointRegister: View {
     @StateObject private var viewmodel = ComponentsPointViewModel()
+    @AppStorage("userName") var userName: String = ""
     
     var body: some View {
         
         VStack{
             VStack (alignment: .leading){
-                Text("Olá, Marcos Daniel!")
+                Text("Olá, \(userName)!")
                     .font(.largeTitle)
                     .fontWeight(.light)
                     .foregroundColor(.bgDarkBlue)
@@ -49,14 +50,13 @@ struct PointRegister: View {
                     }) {
                         Rectangle()
                             .foregroundColor(viewmodel.stateButton.btentrada ? Color.gray : Color.bgDarkBlue)
-                            .frame(width: 64, height: 64)
+                            .frame(width: 90, height: 100)
                             .cornerRadius(10)
                             .overlay(
                                 Image("ponto-entrada")
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 45, height: 45)
-                                
+                                    .padding()
                             )
                         
                             .accessibilityLabel("Botão de Registro de Entrada")
@@ -97,7 +97,7 @@ struct PointRegister: View {
                         .accessibilityValue("Data: \(viewmodel.dataEntrada), Hora: \(viewmodel.horaEntrada)")
                         .accessibilityRemoveTraits(.isStaticText)
                     }
-                    .frame(width: 300, height: 64)
+                    .padding()
                     .background(viewmodel.stateButton.btentrada ? Color.gray : Color.bgDarkBlue)
                     .opacity(viewmodel.stateButton.btentrada ? 0.8 : 1.0)
                     .cornerRadius(10)
@@ -120,13 +120,13 @@ struct PointRegister: View {
                     }) {
                         Rectangle()
                             .foregroundColor(viewmodel.stateButton.btsaída ? Color.gray : Color.bgDarkBlue )
-                            .frame(width: 64, height: 64)
+                            .frame(width: 90, height: 100)
                             .cornerRadius(10)
                             .overlay(
                                 Image("ponto-saida")
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 45, height: 45)
+                                    .padding()
                             )
                             .accessibilityLabel(viewmodel.stateButton.btsaída ? "Botão de Registro de Saída" : "Botão de Registro de Saída")
                             .accessibilityHint(viewmodel.stateButton.btsaída ? "" : "Clique para registrar o ponto de saída")
@@ -166,28 +166,27 @@ struct PointRegister: View {
                         .accessibilityRemoveTraits(.isStaticText)
                         
                     }
-                    .frame(width: 300, height: 64)
+                    .padding()
                     .background(viewmodel.stateButton.btsaída ? Color.gray : Color.bgDarkBlue)
                     .opacity(viewmodel.stateButton.btsaída ? 0.8 : 1.0)
                     .cornerRadius(10)
                     .padding()
                 }
                 .padding([.leading, .trailing], 40)
-                
-                VStack (alignment: .leading) {
-                    Text("Total de Horas: \(viewmodel.totalHorasEMinutos)")
-                        .font(.title2)
-                        .foregroundColor(.bgDarkBlue)
-                        .padding([.leading, .trailing], 40)
-                        .padding(.bottom, 20)
-                        .accessibilityLabel("Total de Horas Trabalhadas")
-                        .accessibilityValue("\(viewmodel.totalHorasEMinutos)")
-                        .accessibilityRemoveTraits(.isStaticText)
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity,  alignment: .leading)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
             
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            VStack (alignment: .leading) {
+                Text("Total de Horas: \(viewmodel.totalHorasEMinutos)")
+                    .font(.title2)
+                    .foregroundColor(.bgDarkBlue)
+                    .padding([.leading, .trailing], 40)
+                    .padding(.bottom, 20)
+                    .accessibilityLabel("Total de Horas Trabalhadas")
+                    .accessibilityValue("\(viewmodel.totalHorasEMinutos)")
+                    .accessibilityRemoveTraits(.isStaticText)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity,  alignment: .leading)
             
             
         }.background(.bgScreen)
