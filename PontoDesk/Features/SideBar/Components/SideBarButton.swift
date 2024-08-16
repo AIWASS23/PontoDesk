@@ -42,5 +42,9 @@ struct SideBarButton: View {
                 .padding(10)
         }
         
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(Text("Botão de seleção de aba: \(tabName)"))
+        .accessibilityHint(Text("Toque para selecionar a aba \(tabName)"))
+        .accessibilityRemoveTraits(currentTab.rawValue == tabName ? .isSelected : [])
     }
 }
