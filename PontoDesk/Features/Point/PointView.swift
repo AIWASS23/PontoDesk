@@ -44,7 +44,6 @@ struct PointView: View {
                 
             }
             
-            .frame(width: 600, alignment: .leading)
             .padding([.leading, .trailing], 16)
             
             Spacer()
