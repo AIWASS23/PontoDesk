@@ -17,7 +17,7 @@ struct NavigationDateView: View {
     var isAdvanceButtonEnabled: Bool
     
     var body: some View {
-        AcessibilityCustom {
+      
             HStack( alignment: .center)  {
                 Button(action: {
                     onPreviousDate()
@@ -70,7 +70,7 @@ struct NavigationDateView: View {
             }
             .frame(minWidth: 365, minHeight: 56)
             .padding()
-        }
+        
     }
     
 }
