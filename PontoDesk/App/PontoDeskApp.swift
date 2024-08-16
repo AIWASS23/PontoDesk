@@ -18,7 +18,6 @@ struct PontoDeskApp: App {
         UserDefaults.standard.register(
             defaults: ["NSApplicationCrashOnExceptions": true]
         )
-        FirebaseApp.configure()
     }
     
     var body: some Scene {

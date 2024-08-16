@@ -9,9 +9,9 @@ import SwiftUI
 
 struct SideBarLayout: View {
     @Binding var currentTab: TabOptions
-    var size: CGSize
     @State private var showLegend = false
-    @AppStorage("userToken") var userToken = ""
+    
+    var size: CGSize
     var loginViewModel = LoginViewModel()
     
     var body: some View {
