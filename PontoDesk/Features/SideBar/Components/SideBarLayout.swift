@@ -21,6 +21,8 @@ struct SideBarLayout: View {
             SideBarButton(buttonAction: {
                 print("Eu funciono")
             }, showLegend: $showLegend, tabName: "PontoDesk", tabIcon: "clock-icon", currentTab: $currentTab)
+            .accessibilityLabel("Botão para Ponto Desk")
+            .accessibilityRemoveTraits(.isButton)
             
             Spacer()
             
@@ -28,6 +30,9 @@ struct SideBarLayout: View {
                 SideBarButton(buttonAction: {
                     currentTab = tab
                 }, showLegend: $showLegend, tabName: tab.rawValue, tabIcon: tab.symbol, currentTab: $currentTab)
+                .accessibilityLabel("Botão para \(tab.rawValue)")
+                .accessibilityHint("Clique para selecionar \(tab.rawValue)")
+                .accessibilityRemoveTraits(.isButton)
             }
             
             Spacer()
@@ -35,7 +40,9 @@ struct SideBarLayout: View {
             SideBarButton(buttonAction: {
                 loginViewModel.emptyToken()
             }, showLegend: $showLegend, tabName: "Logout", tabIcon: "logout-icon", currentTab: $currentTab)
-            
+            .accessibilityLabel("Botão para Sair")
+            .accessibilityHint("Clique para sair do Aplicativo")
+            .accessibilityRemoveTraits(.isButton)
             Spacer()
         }
         .frame(height: size.height)
@@ -46,5 +53,8 @@ struct SideBarLayout: View {
         .onHover { hovering in
             showLegend.toggle()
         }
+        .accessibilityElement(children: .contain)
+        .accessibilityLabel("Barra lateral de navegação")
+        .accessibilityHint("Navegue pelas opções principais")
     }
 }

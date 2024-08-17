@@ -13,7 +13,7 @@ struct PontoDeskApp: App {
     @State var currentUrl: URL = URL(fileURLWithPath: "")
     var loginViewModel = LoginViewModel()
     @AppStorage("userToken") var userToken = ""
-
+    
     init() {
         UserDefaults.standard.register(
             defaults: ["NSApplicationCrashOnExceptions": true]
@@ -23,7 +23,7 @@ struct PontoDeskApp: App {
     var body: some Scene {
         Window("PontoDesk", id: "mainWindow"){
             GeometryReader{reader in
-
+                
                 if userToken.isEmpty{
                     LoginView(screenSize: reader, currentUrl: $currentUrl)
                         .background(.bgScreen)
@@ -43,7 +43,10 @@ struct PontoDeskApp: App {
         Window("Entrar no PontoDesk", id: "auth"){
             if userToken.isEmpty {
                 LoginWebView(url: self.currentUrl)
-                .frame(minWidth: 900, maxWidth: 900, minHeight: 450, maxHeight: 450)
+                    .frame(minWidth: 900, maxWidth: 900, minHeight: 450, maxHeight: 450)
+                PointView()
+                    .background(.bgScreen)
+                    .frame(minWidth: 900, maxWidth: 900, minHeight: 450, maxHeight: 450)
             }
         }
         .windowResizability(.contentSize)
