@@ -15,6 +15,8 @@ struct ReserveRoomTime: View {
             Text("Reservar para Hoje")
                 .font(.largeTitle)
                 .padding(.top, 20)
+                .accessibilityLabel("Reservar para Hoje")
+                .accessibilityRemoveTraits(.isStaticText)
             
             TextField("Quem vai usar a sala?", text: $viewModel.name)
                 .textFieldStyle(.roundedBorder)
@@ -24,6 +26,8 @@ struct ReserveRoomTime: View {
                         .stroke(.blue, lineWidth: 0.5)
                         .padding(.horizontal)
                 )
+                .accessibilityLabel("Digite quem vai usar a sala")
+                .accessibilityRemoveTraits(.isStaticText)
             
             Picker("", selection: $viewModel.selectedShift) {
                 ForEach(ShiftWork.allCases) { shift in
@@ -36,6 +40,8 @@ struct ReserveRoomTime: View {
             .pickerStyle(.segmented)
             .padding(.horizontal, 6)
             .padding(.trailing, 6)
+            .accessibilityLabel("Escolha o turno que deseja reservar a sala")
+            .accessibilityRemoveTraits(.isSummaryElement)
             
             DatePicker(
                 "Escolha o dia",

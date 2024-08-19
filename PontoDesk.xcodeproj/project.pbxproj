@@ -18,6 +18,8 @@
 		148336302C6A254800E5B6EF /* Extension+ShiftWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483362F2C6A254800E5B6EF /* Extension+ShiftWork.swift */; };
 		1487A94F2C6CD767009F582D /* ReserveRoomTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487A94E2C6CD767009F582D /* ReserveRoomTimeViewModel.swift */; };
 		1487A9522C6CEB38009F582D /* ReserveRoomDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487A9512C6CEB38009F582D /* ReserveRoomDayViewModel.swift */; };
+		14B28B592C7368170055F17E /* WindowAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B28B582C7368170055F17E /* WindowAccessor.swift */; };
+		14B28B5B2C7368630055F17E /* AccessorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B28B5A2C7368630055F17E /* AccessorView.swift */; };
 		14D80B8F2C64EF3F00CF9285 /* ReserveRoomTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D80B8E2C64EF3F00CF9285 /* ReserveRoomTime.swift */; };
 		14D80B912C650FDB00CF9285 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D80B902C650FDB00CF9285 /* Layout.swift */; };
 		14D80B932C66447100CF9285 /* ShiftWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D80B922C66447100CF9285 /* ShiftWork.swift */; };
@@ -86,6 +88,8 @@
 		1483362F2C6A254800E5B6EF /* Extension+ShiftWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+ShiftWork.swift"; sourceTree = "<group>"; };
 		1487A94E2C6CD767009F582D /* ReserveRoomTimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveRoomTimeViewModel.swift; sourceTree = "<group>"; };
 		1487A9512C6CEB38009F582D /* ReserveRoomDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveRoomDayViewModel.swift; sourceTree = "<group>"; };
+		14B28B582C7368170055F17E /* WindowAccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowAccessor.swift; sourceTree = "<group>"; };
+		14B28B5A2C7368630055F17E /* AccessorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessorView.swift; sourceTree = "<group>"; };
 		14D80B8E2C64EF3F00CF9285 /* ReserveRoomTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveRoomTime.swift; sourceTree = "<group>"; };
 		14D80B902C650FDB00CF9285 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		14D80B922C66447100CF9285 /* ShiftWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftWork.swift; sourceTree = "<group>"; };
@@ -422,6 +426,8 @@
 				14FBF6162C6B7F050027A065 /* Reservation.swift */,
 				3F8151412C66322300FC5072 /* GitHubURL.swift */,
 				3F8151432C66323E00FC5072 /* GoogleURL.swift */,
+				14B28B582C7368170055F17E /* WindowAccessor.swift */,
+				14B28B5A2C7368630055F17E /* AccessorView.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -612,6 +618,7 @@
 				3F3EFFC22C62575C008E2945 /* PointView.swift in Sources */,
 				3FDC90E62C64F4C1003889AB /* LoginWebView.swift in Sources */,
 				3FE20C4E2C6B882800D77386 /* LoginViewModel.swift in Sources */,
+				14B28B5B2C7368630055F17E /* AccessorView.swift in Sources */,
 				3F3EFFD72C62895B008E2945 /* ButtonLogin.swift in Sources */,
 				3F3EFFCD2C6257EB008E2945 /* ComponentBookTable.swift in Sources */,
 				14D80B932C66447100CF9285 /* ShiftWork.swift in Sources */,
@@ -636,6 +643,7 @@
 				14D80B912C650FDB00CF9285 /* Layout.swift in Sources */,
 				3FF76E722C639FAC008838E6 /* ButtonLoginStyle.swift in Sources */,
 				14D80B8F2C64EF3F00CF9285 /* ReserveRoomTime.swift in Sources */,
+				14B28B592C7368170055F17E /* WindowAccessor.swift in Sources */,
 				3F8151422C66322300FC5072 /* GitHubURL.swift in Sources */,
 				3F3EFFB92C6253C0008E2945 /* SideBarLayout.swift in Sources */,
 				1487A94F2C6CD767009F582D /* ReserveRoomTimeViewModel.swift in Sources */,
@@ -808,7 +816,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PontoDesk/Resources\"";
+
 				DEVELOPMENT_TEAM = 94QMJZ58ZW;
+
+
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -820,7 +831,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+
 				PRODUCT_BUNDLE_IDENTIFIER = RicardoSilva.PontoDesk;
+
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -838,7 +851,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PontoDesk/Resources\"";
+
 				DEVELOPMENT_TEAM = 94QMJZ58ZW;
+
+
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -850,7 +866,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+
 				PRODUCT_BUNDLE_IDENTIFIER = RicardoSilva.PontoDesk;
+
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
