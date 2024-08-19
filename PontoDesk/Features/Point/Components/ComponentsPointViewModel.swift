@@ -26,6 +26,9 @@ class ComponentsPointViewModel: ObservableObject {
     @Published  var horaSaida = ""
     @Published  var stateButton: (btentrada: Bool, btsaída: Bool, bool3: Bool, stsaida:Bool) = (false, true, true, false)
     
+    @AppStorage("userToken") var token = ""
+    @AppStorage("userId") var userId = ""
+    
     private var cancellables = Set<AnyCancellable>()
     
     init() {
@@ -55,6 +58,10 @@ class ComponentsPointViewModel: ObservableObject {
         
         // Atualiza o estado do botão com base na comparação das datas
         stateButton.bool3 = displayedDate == currentDate
+        
+        if displayedDate != currentDate{
+            stateButton.btentrada = true
+        }
     }
     
     func getDayOfWeek(date: Date) -> String {
@@ -95,5 +102,20 @@ class ComponentsPointViewModel: ObservableObject {
         return "\(hours) horas e \(minutes) minutos."
     }
     
+    func clockIn() async -> Bool{
+        let api = pdAPI(token: token)
+        return await api.doClockIn(userID: userId)
+    }
+    
+    func clockOut() async -> Bool{
+        let api = pdAPI(token: token)
+        return await api.doClockOut(userID: userId)
+    }
+    
+    func getCurrentClock() async -> ClockTime?{
+        let api = pdAPI(token: token)
+        
+        return await api.getCurrentClock()
+    }
 }
 

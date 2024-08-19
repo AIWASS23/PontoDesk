@@ -19,14 +19,13 @@ struct PointView: View {
                 dayOfWeek: viewModel.dayOfWeek,
                 formattedDate: viewModel.formattedDate,
                 onPreviousDate: {
-                    if let previousDate = Calendar.current.date(byAdding: .day, value: -1, to: viewModel.date) {
-                        let calendar = Calendar.current
-                        var components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: previousDate)
-                        components.hour = calendar.component(.hour, from: viewModel.date)
-                        components.minute = calendar.component(.minute, from: viewModel.date)
-                        components.second = calendar.component(.second, from: viewModel.date)
-                        viewModel.date = calendar.date(from: components) ?? viewModel.date
-                    }
+                    guard let previousDate =
+                            Calendar.current.date(
+                                byAdding: .day,
+                                value: -1,
+                                to: viewModel.date) else { return }
+                    viewModel.date = previousDate
+                    
                     viewModel.stateButton.bool3 = false
                 },
                 onNextDate: {
@@ -40,8 +39,9 @@ struct PointView: View {
             
             VStack (alignment: .leading){
                 //Registro de Ponto
-                PointRegister()
-                
+        PointRegister()
+                    .environmentObject(viewModel)
+          
             }
             
             .padding([.leading, .trailing], 16)

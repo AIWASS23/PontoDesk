@@ -53,6 +53,12 @@
 		3FE20C4E2C6B882800D77386 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE20C4D2C6B882800D77386 /* LoginViewModel.swift */; };
 		3FF76E722C639FAC008838E6 /* ButtonLoginStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF76E712C639FAC008838E6 /* ButtonLoginStyle.swift */; };
 		B83380912C5D2B72006AA587 /* TemplateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83380902C5D2B72006AA587 /* TemplateComponent.swift */; };
+		B87038432C72AEAF00035038 /* DateStringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87038422C72AEAF00035038 /* DateStringConverter.swift */; };
+		B87038452C72AFA300035038 /* ClockResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87038442C72AFA300035038 /* ClockResult.swift */; };
+		B8B30FDC2C700B6A00772666 /* ClockTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B30FDB2C700B6A00772666 /* ClockTime.swift */; };
+		B8CAF2982C6F81BE000AC0B0 /* pdAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CAF2972C6F81BE000AC0B0 /* pdAPI.swift */; };
+		B8CAF29A2C6F839E000AC0B0 /* pdURLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CAF2992C6F839E000AC0B0 /* pdURLService.swift */; };
+		B8CAF29C2C6F84C9000AC0B0 /* HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CAF29B2C6F84C9000AC0B0 /* HttpMethods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,9 +126,14 @@
 		3FE20C4D2C6B882800D77386 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		3FF76E712C639FAC008838E6 /* ButtonLoginStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLoginStyle.swift; sourceTree = "<group>"; };
 		B83380902C5D2B72006AA587 /* TemplateComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateComponent.swift; sourceTree = "<group>"; };
-		B83380982C5D2DB7006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B833809C2C5D2E14006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B83380A72C5D2E74006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
+		B87038422C72AEAF00035038 /* DateStringConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateStringConverter.swift; sourceTree = "<group>"; };
+		B87038442C72AFA300035038 /* ClockResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockResult.swift; sourceTree = "<group>"; };
+		B8B30FDB2C700B6A00772666 /* ClockTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockTime.swift; sourceTree = "<group>"; };
+		B8CAF2972C6F81BE000AC0B0 /* pdAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdAPI.swift; sourceTree = "<group>"; };
+		B8CAF2992C6F839E000AC0B0 /* pdURLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdURLService.swift; sourceTree = "<group>"; };
+		B8CAF29B2C6F84C9000AC0B0 /* HttpMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethods.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +377,7 @@
 		B83380892C5D2901006AA587 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B87038462C72BF1200035038 /* Classes */,
 				B83380972C5D2D42006AA587 /* Enums */,
 				B83380962C5D2D0F006AA587 /* Components */,
 				B83380952C5D2D02006AA587 /* Extensions */,
@@ -379,7 +391,8 @@
 		B833808A2C5D2908006AA587 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B83380982C5D2DB7006AA587 /* .placeholder */,
+				B8CAF2972C6F81BE000AC0B0 /* pdAPI.swift */,
+				B8CAF2992C6F839E000AC0B0 /* pdURLService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -398,6 +411,8 @@
 		B833808C2C5D291D006AA587 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B8B30FDB2C700B6A00772666 /* ClockTime.swift */,
+				B87038442C72AFA300035038 /* ClockResult.swift */,
 				B83380A72C5D2E74006AA587 /* .placeholder */,
 			);
 			path = Models;
@@ -451,6 +466,7 @@
 		B83380952C5D2D02006AA587 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B87038422C72AEAF00035038 /* DateStringConverter.swift */,
 				14D80B902C650FDB00CF9285 /* Layout.swift */,
 				1483362F2C6A254800E5B6EF /* Extension+ShiftWork.swift */,
 			);
@@ -469,9 +485,17 @@
 			isa = PBXGroup;
 			children = (
 				3F3EFFBC2C625701008E2945 /* TabOptions.swift */,
+				B8CAF29B2C6F84C9000AC0B0 /* HttpMethods.swift */,
 				14D80B922C66447100CF9285 /* ShiftWork.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		B87038462C72BF1200035038 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -616,7 +640,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F3EFFC22C62575C008E2945 /* PointView.swift in Sources */,
+				B8B30FDC2C700B6A00772666 /* ClockTime.swift in Sources */,
 				3FDC90E62C64F4C1003889AB /* LoginWebView.swift in Sources */,
+				B8CAF29C2C6F84C9000AC0B0 /* HttpMethods.swift in Sources */,
 				3FE20C4E2C6B882800D77386 /* LoginViewModel.swift in Sources */,
 				14B28B5B2C7368630055F17E /* AccessorView.swift in Sources */,
 				3F3EFFD72C62895B008E2945 /* ButtonLogin.swift in Sources */,
@@ -626,9 +652,12 @@
 				213FFC1E2C6B8698003C2BD4 /* PointRegister.swift in Sources */,
 				3F3EFFD52C62884D008E2945 /* LoginView.swift in Sources */,
 				212975C52C668EF800905CE5 /* ComponentsPointViewModel.swift in Sources */,
+				B87038432C72AEAF00035038 /* DateStringConverter.swift in Sources */,
 				147ED4202C57B7EE008D4C04 /* ContentView.swift in Sources */,
 				3F3EFFC52C625771008E2945 /* BookTableView.swift in Sources */,
 				B83380912C5D2B72006AA587 /* TemplateComponent.swift in Sources */,
+				B8CAF2982C6F81BE000AC0B0 /* pdAPI.swift in Sources */,
+				B8CAF29A2C6F839E000AC0B0 /* pdURLService.swift in Sources */,
 				3F3EFFD12C625F70008E2945 /* SideBarButton.swift in Sources */,
 				3F3EFFCF2C6257F9008E2945 /* NavigationDateView.swift in Sources */,
 				3F3EFFC82C62578D008E2945 /* BookRoomView.swift in Sources */,
@@ -640,6 +669,7 @@
 				14FBF61B2C6B92160027A065 /* ReserveRoomView.swift in Sources */,
 				14FBF6172C6B7F050027A065 /* Reservation.swift in Sources */,
 				3F3EFFCB2C6257DB008E2945 /* ComponentBookRoom.swift in Sources */,
+				B87038452C72AFA300035038 /* ClockResult.swift in Sources */,
 				14D80B912C650FDB00CF9285 /* Layout.swift in Sources */,
 				3FF76E722C639FAC008838E6 /* ButtonLoginStyle.swift in Sources */,
 				14D80B8F2C64EF3F00CF9285 /* ReserveRoomTime.swift in Sources */,
@@ -816,10 +846,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PontoDesk/Resources\"";
-
-				DEVELOPMENT_TEAM = 94QMJZ58ZW;
-
-
+				DEVELOPMENT_TEAM = PSL5Y7F3J8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -851,10 +878,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PontoDesk/Resources\"";
-
-				DEVELOPMENT_TEAM = 94QMJZ58ZW;
-
-
+				DEVELOPMENT_TEAM = PSL5Y7F3J8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -882,7 +906,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D499HFTXDJ;
+				DEVELOPMENT_TEAM = PSL5Y7F3J8;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
@@ -901,7 +925,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D499HFTXDJ;
+				DEVELOPMENT_TEAM = PSL5Y7F3J8;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
@@ -919,7 +943,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D499HFTXDJ;
+				DEVELOPMENT_TEAM = PSL5Y7F3J8;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = YasminCarloto.PontoDeskUITests;
@@ -936,7 +960,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D499HFTXDJ;
+				DEVELOPMENT_TEAM = PSL5Y7F3J8;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = YasminCarloto.PontoDeskUITests;

@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct PointRegister: View {
-    @StateObject private var viewmodel = ComponentsPointViewModel()
+    @EnvironmentObject private var viewmodel:  ComponentsPointViewModel
     @AppStorage("userName") var userName: String = ""
+
     
     var body: some View {
         
@@ -41,12 +42,20 @@ struct PointRegister: View {
                 //Botão de Entrada
                 HStack (alignment: .center){
                     Button(action: {
-                        viewmodel.dataInicial = Date()
-                        guard let dataInicial = viewmodel.dataInicial else { return }
-                        viewmodel.dataEntrada = String(" \(viewmodel.formatDatePonto(date: dataInicial))")
-                        viewmodel.horaEntrada = String(viewmodel.formatHourPonto(date: dataInicial))
-                        viewmodel.stateButton.btentrada.toggle()
-                        viewmodel.stateButton.btsaída = false
+                        DispatchQueue.main.async {
+                            Task{
+                                viewmodel.dataInicial = Date()
+                                guard let dataInicial = viewmodel.dataInicial else { return }
+                                viewmodel.dataEntrada = String(" \(viewmodel.formatDatePonto(date: dataInicial))")
+                                viewmodel.horaEntrada = String(viewmodel.formatHourPonto(date: dataInicial))
+                                viewmodel.stateButton.btentrada.toggle()
+                                viewmodel.stateButton.btsaída = false
+                                
+                                let savedDate = await viewmodel.clockIn()
+                                
+                            }
+                        }
+                        
                     }) {
                         Rectangle()
                             .foregroundColor(viewmodel.stateButton.btentrada ? Color.gray : Color.bgDarkBlue)
@@ -109,13 +118,19 @@ struct PointRegister: View {
                 HStack{
                     
                     Button(action: {
-                        viewmodel.dataFinal = Date()
-                        guard let dataFinal = viewmodel.dataFinal else { return }
-                        viewmodel.dataSaida = String("\(viewmodel.formatDatePonto(date: dataFinal))")
-                        viewmodel.horaSaida = String(viewmodel.formatHourPonto(date: dataFinal))
-                        viewmodel.stateButton.btsaída.toggle()
-                        viewmodel.totalHorasEMinutos = viewmodel.calculateTimeDifference(start: viewmodel.dataInicial!, end: dataFinal)
-                        viewmodel.stateButton.stsaida = true
+                        DispatchQueue.main.async {
+                            Task{
+                                viewmodel.dataFinal = Date()
+                                guard let dataFinal = viewmodel.dataFinal else { return }
+                                viewmodel.dataSaida = String("\(viewmodel.formatDatePonto(date: dataFinal))")
+                                viewmodel.horaSaida = String(viewmodel.formatHourPonto(date: dataFinal))
+                                viewmodel.stateButton.btsaída.toggle()
+                                viewmodel.totalHorasEMinutos = viewmodel.calculateTimeDifference(start: viewmodel.dataInicial!, end: dataFinal)
+                                viewmodel.stateButton.stsaida = true
+                                await viewmodel.clockOut()
+                            }
+                        }
+                        
                         
                     }) {
                         Rectangle()
@@ -173,6 +188,7 @@ struct PointRegister: View {
                     .padding()
                 }
                 .padding([.leading, .trailing], 40)
+
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
             
@@ -189,6 +205,45 @@ struct PointRegister: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity,  alignment: .leading)
             
             
+
+        }
+        .background(.bgScreen)
+        .onAppear{
+            let dispatchSession = DispatchQueue(label: "session", attributes: .concurrent, target: .global(qos: .default))
+            dispatchSession.async {
+                Task{
+                    
+                    guard let result = await viewmodel.getCurrentClock() else { return }
+                    
+                    let clock = result.result
+                    
+                    guard let entry = clock.entry else { viewmodel.stateButton.btsaída = false; return }
+                    DispatchQueue.main.async {
+                        guard let dataInicial = entry.toDate() else { return }
+                        print(dataInicial)
+                        viewmodel.dataInicial = dataInicial
+                        guard let dataInicial = viewmodel.dataInicial else { return }
+                        viewmodel.dataEntrada = String(" \(viewmodel.formatDatePonto(date: dataInicial))")
+                        viewmodel.horaEntrada = String(viewmodel.formatHourPonto(date: dataInicial))
+                        viewmodel.stateButton.btentrada.toggle()
+                    }
+                    guard let exit = clock.exit else { viewmodel.stateButton.btsaída = false ;  return }
+                     
+                    DispatchQueue.main.async {
+                        guard let dataFinal = exit.toDate() else { return }
+                        
+                        viewmodel.dataFinal = dataFinal
+                        guard let dataFinal = viewmodel.dataFinal else { return }
+                        viewmodel.dataSaida = String(" \(viewmodel.formatDatePonto(date: dataFinal))")
+                        viewmodel.horaSaida = String(viewmodel.formatHourPonto(date: dataFinal))
+                        viewmodel.totalHorasEMinutos = viewmodel.calculateTimeDifference(start: viewmodel.dataInicial!, end: viewmodel.dataFinal!)
+                        viewmodel.stateButton.stsaida = true
+                    }
+                    
+                    
+                }
+            }
+        }
         }.background(.bgScreen)
             .accessibilityElement(children: .contain)
     }
@@ -196,4 +251,5 @@ struct PointRegister: View {
 }
 #Preview {
     PointRegister()
+        .environmentObject(ComponentsPointViewModel())
 }
