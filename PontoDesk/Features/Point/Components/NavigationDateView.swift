@@ -32,6 +32,8 @@ struct NavigationDateView: View {
                         
                 }
                 .buttonStyle(PlainButtonStyle())
+                .accessibilityRemoveTraits(.isButton)
+                
                 
                 
                 VStack {
@@ -50,6 +52,7 @@ struct NavigationDateView: View {
                     
                 }
                .accessibilityElement(children: .combine)
+               .accessibilityRemoveTraits(.isStaticText)
                 
                 .frame(minWidth: 330, minHeight: 56)
                 
@@ -67,6 +70,7 @@ struct NavigationDateView: View {
                 }
                 .buttonStyle(PlainButtonStyle())
                 .disabled(!isAdvanceButtonEnabled)
+                .accessibilityRemoveTraits(.isButton)
             }
             .frame(minWidth: 365, minHeight: 56)
             .padding()
