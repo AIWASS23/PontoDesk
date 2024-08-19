@@ -45,7 +45,9 @@ struct PontoDeskApp: App {
         Window("Entrar no PontoDesk", id: "auth"){
             if userToken.isEmpty {
                 LoginWebView(url: self.currentUrl)
-                    .frame(minWidth: 900, maxWidth: .infinity, minHeight: 450, maxHeight: .infinity)
+
+                    .frame(minWidth: 900, maxWidth: 900, minHeight: 450, maxHeight: 450)
+
             } else {
                 PointView()
                     .background(.bgScreen)
