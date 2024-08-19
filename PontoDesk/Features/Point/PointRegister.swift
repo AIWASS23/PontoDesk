@@ -9,19 +9,20 @@ import SwiftUI
 
 struct PointRegister: View {
     @EnvironmentObject private var viewmodel:  ComponentsPointViewModel
-    
+    @AppStorage("userName") var userName: String = ""
+
     
     var body: some View {
+        
         VStack{
             VStack (alignment: .leading){
-                Text("Olá, Marcos Daniel!")
+                Text("Olá, \(userName)!")
                     .font(.largeTitle)
                     .fontWeight(.light)
                     .foregroundColor(.bgDarkBlue)
                     .padding([.trailing, .leading], 40)
                     .lineLimit(1)
                     .padding([.bottom,.top], 5)
-                
                 
                 Text("Seja bem-vindo!")
                     .font(.title2)
@@ -30,7 +31,8 @@ struct PointRegister: View {
                     .padding([.trailing, .leading], 40)
                     .padding(.bottom, 25)
             }
-            
+            .accessibilityElement(children: .combine)
+            .accessibilityRemoveTraits(.isStaticText)
             .frame(maxWidth: .infinity,   alignment: .leading)
             .background(.bgScreen)
             
@@ -57,19 +59,22 @@ struct PointRegister: View {
                     }) {
                         Rectangle()
                             .foregroundColor(viewmodel.stateButton.btentrada ? Color.gray : Color.bgDarkBlue)
-                            .frame(width: 64, height: 64)
+                            .frame(width: 90, height: 100)
                             .cornerRadius(10)
                             .overlay(
                                 Image("ponto-entrada")
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 45, height: 45)
-
+                                    .padding()
                             )
+                        
+                            .accessibilityLabel("Botão de Registro de Entrada")
+                            .accessibilityHint(viewmodel.stateButton.btentrada ? "Ponto de Entrada já registrado" : "Clique para registrar o ponto de entrada")
                     }
+                    .accessibilityRemoveTraits(.isButton)
                     .buttonStyle(PlainButtonStyle())
                     .disabled(viewmodel.stateButton.btentrada)
-                
+                    
                     
                     // Bloco de informações de entrada
                     
@@ -77,6 +82,8 @@ struct PointRegister: View {
                         Text(viewmodel.stateButton.btentrada ? "Ponto de Entrada Registrado" : "Ponto de Entrada")
                             .font(.title)
                             .foregroundColor(.white)
+                            .accessibilityLabel(viewmodel.stateButton.btentrada ? "Status do Ponto de Entrada: Registrado" : "Status do Ponto de Entrada: Não Registrado")
+                            .accessibilityRemoveTraits(.isStaticText)
                         
                         HStack{
                             Label("-", systemImage: "calendar")
@@ -94,8 +101,12 @@ struct PointRegister: View {
                                 .font(.title3)
                                 .fontWeight(.ultraLight)
                         }
+                        .accessibilityElement(children: .combine)
+                        .accessibilityLabel("Informações de Entrada")
+                        .accessibilityValue("Data: \(viewmodel.dataEntrada), Hora: \(viewmodel.horaEntrada)")
+                        .accessibilityRemoveTraits(.isStaticText)
                     }
-                    .frame(width: 300, height: 64)
+                    .padding()
                     .background(viewmodel.stateButton.btentrada ? Color.gray : Color.bgDarkBlue)
                     .opacity(viewmodel.stateButton.btentrada ? 0.8 : 1.0)
                     .cornerRadius(10)
@@ -124,24 +135,29 @@ struct PointRegister: View {
                     }) {
                         Rectangle()
                             .foregroundColor(viewmodel.stateButton.btsaída ? Color.gray : Color.bgDarkBlue )
-                            .frame(width: 64, height: 64)
+                            .frame(width: 90, height: 100)
                             .cornerRadius(10)
                             .overlay(
                                 Image("ponto-saida")
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 45, height: 45)
+                                    .padding()
                             )
+                            .accessibilityLabel(viewmodel.stateButton.btsaída ? "Botão de Registro de Saída" : "Botão de Registro de Saída")
+                            .accessibilityHint(viewmodel.stateButton.btsaída ? "" : "Clique para registrar o ponto de saída")
                     }
+                    .accessibilityRemoveTraits(.isButton)
                     .buttonStyle(PlainButtonStyle())
                     .disabled(viewmodel.stateButton.btsaída)
-                   
+                    
                     // Bloco de informações de saida
                     
                     VStack (alignment: .leading){
                         Text(viewmodel.stateButton.stsaida ? "Ponto de Saída Registrado" : "Ponto de Saída" )
                             .font(.title)
                             .foregroundColor(.white)
+                            .accessibilityLabel(viewmodel.stateButton.stsaida ? "Status do Ponto de Saída: Registrado " : "Status do Ponto de Saída: Não Registrado")
+                            .accessibilityRemoveTraits(.isStaticText)
                         
                         HStack{
                             Label("-", systemImage: "calendar")
@@ -159,29 +175,37 @@ struct PointRegister: View {
                                 .font(.title3)
                                 .fontWeight(.ultraLight)
                         }
+                        .accessibilityElement(children: .combine)
+                        .accessibilityLabel("Informações de Saída")
+                        .accessibilityValue("Data: \(viewmodel.dataSaida), Hora: \(viewmodel.horaSaida)")
+                        .accessibilityRemoveTraits(.isStaticText)
+                        
                     }
-                    .frame(width: 300, height: 64)
+                    .padding()
                     .background(viewmodel.stateButton.btsaída ? Color.gray : Color.bgDarkBlue)
                     .opacity(viewmodel.stateButton.btsaída ? 0.8 : 1.0)
                     .cornerRadius(10)
                     .padding()
                 }
                 .padding([.leading, .trailing], 40)
-                  
-                VStack (alignment: .leading) {
-                    Text("Total de Horas: \(viewmodel.totalHorasEMinutos)")
-                        .font(.title2)
-                        .foregroundColor(.bgDarkBlue)
-                        .padding([.leading, .trailing], 40)
-                        .padding(.bottom, 20)
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity,  alignment: .leading)
-                
-                
+
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
             
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            VStack (alignment: .leading) {
+                Text("Total de Horas: \(viewmodel.totalHorasEMinutos)")
+                    .font(.title2)
+                    .foregroundColor(.bgDarkBlue)
+                    .padding([.leading, .trailing], 40)
+                    .padding(.bottom, 20)
+                    .accessibilityLabel("Total de Horas Trabalhadas")
+                    .accessibilityValue("\(viewmodel.totalHorasEMinutos)")
+                    .accessibilityRemoveTraits(.isStaticText)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity,  alignment: .leading)
             
+            
+
         }
         .background(.bgScreen)
         .onAppear{
@@ -220,7 +244,10 @@ struct PointRegister: View {
                 }
             }
         }
+        }.background(.bgScreen)
+            .accessibilityElement(children: .contain)
     }
+    
 }
 #Preview {
     PointRegister()
