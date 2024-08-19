@@ -243,7 +243,7 @@ struct PointRegister: View {
                     
                 }
             }
-        }
+        
         }.background(.bgScreen)
             .accessibilityElement(children: .contain)
     }
