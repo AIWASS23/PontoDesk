@@ -13,9 +13,11 @@ extension String {
 
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone.current
+        print(dateFormatter.timeZone)
         dateFormatter.locale = Locale.current
         dateFormatter.dateFormat = format
         let date = dateFormatter.date(from: self)
+        
         return date
 
     }

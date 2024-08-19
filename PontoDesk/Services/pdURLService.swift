@@ -52,6 +52,7 @@ struct pdURLService{
         
         do{
             var (data, response ) = try await URLSession.shared.data(for: request)
+            print(String(data: data, encoding: .utf8))
             if let httpResponse = response as? HTTPURLResponse{
                 print(httpResponse.statusCode)
             }

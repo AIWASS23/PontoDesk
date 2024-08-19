@@ -27,6 +27,7 @@ struct NavigationDateView: View {
                     .foregroundColor(.bgDarkBlue)
             }
            .buttonStyle(PlainButtonStyle())
+           .disabled(true)
             
             VStack {
                

@@ -114,6 +114,7 @@ class ComponentsPointViewModel: ObservableObject {
     
     func getCurrentClock() async -> ClockTime?{
         let api = pdAPI(token: token)
+        
         return await api.getCurrentClock()
     }
 }

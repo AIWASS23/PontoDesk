@@ -109,16 +109,17 @@ struct PointRegister: View {
                     Button(action: {
                         DispatchQueue.main.async {
                             Task{
-                                 print( await viewmodel.clockOut())
+                                viewmodel.dataFinal = Date()
+                                guard let dataFinal = viewmodel.dataFinal else { return }
+                                viewmodel.dataSaida = String("\(viewmodel.formatDatePonto(date: dataFinal))")
+                                viewmodel.horaSaida = String(viewmodel.formatHourPonto(date: dataFinal))
+                                viewmodel.stateButton.btsaída.toggle()
+                                viewmodel.totalHorasEMinutos = viewmodel.calculateTimeDifference(start: viewmodel.dataInicial!, end: dataFinal)
+                                viewmodel.stateButton.stsaida = true
+                                await viewmodel.clockOut()
                             }
                         }
-                        viewmodel.dataFinal = Date()
-                        guard let dataFinal = viewmodel.dataFinal else { return }
-                        viewmodel.dataSaida = String("\(viewmodel.formatDatePonto(date: dataFinal))")
-                        viewmodel.horaSaida = String(viewmodel.formatHourPonto(date: dataFinal))
-                        viewmodel.stateButton.btsaída.toggle()
-                        viewmodel.totalHorasEMinutos = viewmodel.calculateTimeDifference(start: viewmodel.dataInicial!, end: dataFinal)
-                        viewmodel.stateButton.stsaida = true
+                        
                         
                     }) {
                         Rectangle()
@@ -166,7 +167,7 @@ struct PointRegister: View {
                     .padding()
                 }
                 .padding([.leading, .trailing], 40)
-                
+                  
                 VStack (alignment: .leading) {
                     Text("Total de Horas: \(viewmodel.totalHorasEMinutos)")
                         .font(.title2)
@@ -189,29 +190,32 @@ struct PointRegister: View {
                 Task{
                     
                     guard let result = await viewmodel.getCurrentClock() else { return }
+                    
                     let clock = result.result
                     
-                    guard let entry = clock.entry else { print(clock); return }
+                    guard let entry = clock.entry else { viewmodel.stateButton.btsaída = false; return }
                     DispatchQueue.main.async {
                         guard let dataInicial = entry.toDate() else { return }
-                        
+                        print(dataInicial)
                         viewmodel.dataInicial = dataInicial
                         guard let dataInicial = viewmodel.dataInicial else { return }
                         viewmodel.dataEntrada = String(" \(viewmodel.formatDatePonto(date: dataInicial))")
                         viewmodel.horaEntrada = String(viewmodel.formatHourPonto(date: dataInicial))
                         viewmodel.stateButton.btentrada.toggle()
                     }
-                    guard let exit = clock.exit else { return }
-                    
+                    guard let exit = clock.exit else { viewmodel.stateButton.btsaída = false ;  return }
+                     
                     DispatchQueue.main.async {
                         guard let dataFinal = exit.toDate() else { return }
                         
                         viewmodel.dataFinal = dataFinal
-                        guard let dataInicial = viewmodel.dataInicial else { return }
+                        guard let dataFinal = viewmodel.dataFinal else { return }
                         viewmodel.dataSaida = String(" \(viewmodel.formatDatePonto(date: dataFinal))")
                         viewmodel.horaSaida = String(viewmodel.formatHourPonto(date: dataFinal))
-                        
+                        viewmodel.totalHorasEMinutos = viewmodel.calculateTimeDifference(start: viewmodel.dataInicial!, end: viewmodel.dataFinal!)
+                        viewmodel.stateButton.stsaida = true
                     }
+                    
                     
                 }
             }
