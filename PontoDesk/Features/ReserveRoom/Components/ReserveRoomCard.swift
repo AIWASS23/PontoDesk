@@ -11,20 +11,28 @@ struct ReserveRoomCard: View {
     let reservation: Reservation
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("\(reservation.name)")
-                .font(.largeTitle)
-            HStack {
-                Image(systemName: "clock")
-                Text("De \(formatTime(reservation.entryTime)) às \(formatTime(reservation.exitTime))")
-                    .font(.title)
+        GeometryReader { geometry in
+            VStack(alignment: .leading) {
+                Text("\(reservation.name)")
+                    .font(.system(size: geometry.size.width * 0.15))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.1)
+                HStack {
+                    Image(systemName: "clock")
+                        .font(.system(size: min(geometry.size.width * 0.05, 40)))
+                        .minimumScaleFactor(0.1)
+                        
+                    Text("De \(formatTime(reservation.entryTime)) às \(formatTime(reservation.exitTime))")
+                        .font(.system(size: geometry.size.width * 0.08))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.2)
+                }
             }
+            .frame(minWidth: 368, maxWidth: .infinity, minHeight: 124, maxHeight: .infinity)
+            .background(Color("bg-dark-blue"))
+            .preferredColorScheme(.dark)
+            .cornerRadius(10)
         }
-        .frame(minWidth: 368, minHeight: 124)
-        .background(Color("bg-dark-blue"))
-        .preferredColorScheme(.dark)
-        .cornerRadius(10)
-
     }
     
     func formatTime(_ date: Date) -> String {
