@@ -41,6 +41,9 @@
 		3FE20C4E2C6B882800D77386 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE20C4D2C6B882800D77386 /* LoginViewModel.swift */; };
 		3FF76E722C639FAC008838E6 /* ButtonLoginStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF76E712C639FAC008838E6 /* ButtonLoginStyle.swift */; };
 		B83380912C5D2B72006AA587 /* TemplateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83380902C5D2B72006AA587 /* TemplateComponent.swift */; };
+		B87038432C72AEAF00035038 /* DateStringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87038422C72AEAF00035038 /* DateStringConverter.swift */; };
+		B87038452C72AFA300035038 /* ClockResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87038442C72AFA300035038 /* ClockResult.swift */; };
+		B8B30FDC2C700B6A00772666 /* ClockTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B30FDB2C700B6A00772666 /* ClockTime.swift */; };
 		B8CAF2982C6F81BE000AC0B0 /* pdAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CAF2972C6F81BE000AC0B0 /* pdAPI.swift */; };
 		B8CAF29A2C6F839E000AC0B0 /* pdURLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CAF2992C6F839E000AC0B0 /* pdURLService.swift */; };
 		B8CAF29C2C6F84C9000AC0B0 /* HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CAF29B2C6F84C9000AC0B0 /* HttpMethods.swift */; };
@@ -101,6 +104,9 @@
 		B83380902C5D2B72006AA587 /* TemplateComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateComponent.swift; sourceTree = "<group>"; };
 		B833809C2C5D2E14006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
 		B83380A72C5D2E74006AA587 /* .placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .placeholder; sourceTree = "<group>"; };
+		B87038422C72AEAF00035038 /* DateStringConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateStringConverter.swift; sourceTree = "<group>"; };
+		B87038442C72AFA300035038 /* ClockResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockResult.swift; sourceTree = "<group>"; };
+		B8B30FDB2C700B6A00772666 /* ClockTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockTime.swift; sourceTree = "<group>"; };
 		B8CAF2972C6F81BE000AC0B0 /* pdAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdAPI.swift; sourceTree = "<group>"; };
 		B8CAF2992C6F839E000AC0B0 /* pdURLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdURLService.swift; sourceTree = "<group>"; };
 		B8CAF29B2C6F84C9000AC0B0 /* HttpMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethods.swift; sourceTree = "<group>"; };
@@ -317,6 +323,7 @@
 		B83380892C5D2901006AA587 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B87038462C72BF1200035038 /* Classes */,
 				B83380972C5D2D42006AA587 /* Enums */,
 				B83380962C5D2D0F006AA587 /* Components */,
 				B83380952C5D2D02006AA587 /* Extensions */,
@@ -350,6 +357,8 @@
 		B833808C2C5D291D006AA587 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B8B30FDB2C700B6A00772666 /* ClockTime.swift */,
+				B87038442C72AFA300035038 /* ClockResult.swift */,
 				B83380A72C5D2E74006AA587 /* .placeholder */,
 			);
 			path = Models;
@@ -400,6 +409,7 @@
 		B83380952C5D2D02006AA587 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B87038422C72AEAF00035038 /* DateStringConverter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -419,6 +429,13 @@
 				B8CAF29B2C6F84C9000AC0B0 /* HttpMethods.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		B87038462C72BF1200035038 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -563,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F3EFFC22C62575C008E2945 /* PointView.swift in Sources */,
+				B8B30FDC2C700B6A00772666 /* ClockTime.swift in Sources */,
 				3FDC90E62C64F4C1003889AB /* LoginWebView.swift in Sources */,
 				B8CAF29C2C6F84C9000AC0B0 /* HttpMethods.swift in Sources */,
 				3FE20C4E2C6B882800D77386 /* LoginViewModel.swift in Sources */,
@@ -572,6 +590,7 @@
 				213FFC1E2C6B8698003C2BD4 /* PointRegister.swift in Sources */,
 				3F3EFFD52C62884D008E2945 /* LoginView.swift in Sources */,
 				212975C52C668EF800905CE5 /* ComponentsPointViewModel.swift in Sources */,
+				B87038432C72AEAF00035038 /* DateStringConverter.swift in Sources */,
 				147ED4202C57B7EE008D4C04 /* ContentView.swift in Sources */,
 				3F3EFFC52C625771008E2945 /* BookTableView.swift in Sources */,
 				B83380912C5D2B72006AA587 /* TemplateComponent.swift in Sources */,
@@ -582,6 +601,7 @@
 				3F3EFFC82C62578D008E2945 /* BookRoomView.swift in Sources */,
 				3F3EFFBD2C625701008E2945 /* TabOptions.swift in Sources */,
 				3F3EFFCB2C6257DB008E2945 /* ComponentBookRoom.swift in Sources */,
+				B87038452C72AFA300035038 /* ClockResult.swift in Sources */,
 				3FF76E722C639FAC008838E6 /* ButtonLoginStyle.swift in Sources */,
 				3F8151422C66322300FC5072 /* GitHubURL.swift in Sources */,
 				3F3EFFB92C6253C0008E2945 /* SideBarLayout.swift in Sources */,

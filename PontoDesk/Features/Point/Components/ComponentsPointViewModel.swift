@@ -58,6 +58,10 @@ class ComponentsPointViewModel: ObservableObject {
         
         // Atualiza o estado do botão com base na comparação das datas
         stateButton.bool3 = displayedDate == currentDate
+        
+        if displayedDate != currentDate{
+            stateButton.btentrada = true
+        }
     }
     
     func getDayOfWeek(date: Date) -> String {
@@ -106,6 +110,11 @@ class ComponentsPointViewModel: ObservableObject {
     func clockOut() async -> Bool{
         let api = pdAPI(token: token)
         return await api.doClockOut(userID: userId)
+    }
+    
+    func getCurrentClock() async -> ClockTime?{
+        let api = pdAPI(token: token)
+        return await api.getCurrentClock()
     }
 }
 
