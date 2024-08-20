@@ -12,10 +12,10 @@ struct ReserveRoomTime: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            Text("Reservar para Hoje")
+            Text("Reserve a sala em qualquer dia")
                 .font(.largeTitle)
                 .padding(.top, 20)
-                .accessibilityLabel("Reservar para Hoje")
+                .accessibilityLabel("Reserve a sala em qualquer dia")
                 .accessibilityRemoveTraits(.isStaticText)
             
             TextField("Quem vai usar a sala?", text: $viewModel.name)
