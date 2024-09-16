@@ -47,7 +47,7 @@ Utilizamos uma API desenvolvida pela nossa equipe que está em repositório priv
 * **AWS Lamba**, para o desenvolvimento da API.
 * **Python**, como linguagem principal do desenvolvimento desta aplicação.
 
-## Exucatar aplicação localmente
+## Executar aplicação localmente
 1. Clone o repositório:
    ```
    git clone https://github.com/AIWASS23/PontoDesk.git
